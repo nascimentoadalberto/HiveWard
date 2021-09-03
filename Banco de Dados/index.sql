@@ -6,7 +6,7 @@ create table cadastro (
     nome varchar(60) not null,
     email varchar(70) not null,
     senha varchar(40) not null,
-    cpfcnpj bigint not null
+    cpfcnpj char(14) not null
 );
 
 create table colmeias(
