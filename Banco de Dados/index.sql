@@ -18,7 +18,7 @@ create table colmeias(
 );
 
 create table produtos(
-    idProduto int not null auto_increment,
+    idProduto int primary key not null auto_increment,
     nome varchar(30) not null,
     preco decimal(10,2) not null
 );
