@@ -3,9 +3,11 @@
 body {
     background-image: url('Calculadora Financeira - Background.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     color: antiquewhite;
     font-family: 'Montserrat';
+    height: 700px;
+    width: 100%;
 }
 
 #content {
@@ -32,8 +34,9 @@ body {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
-    border-radius: 8px;
-    border: #FEAA00 solid 3px;
+    border-radius: 5px;
+    border: #FEAA00 solid 1.5px;
+    background-color: transparent;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 8px;
