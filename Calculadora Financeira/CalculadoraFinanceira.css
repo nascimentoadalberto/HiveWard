@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,500&display=swap');
+
+body {
+    background-image: url('Calculadora Financeira - Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+    font-family: 'Montserrat';
+}
+
+#content {
+    margin-top: 360px;
+    margin-left: 180px;
+}
+
+#content2{
+    display: flex;
+}
+
+#titulo {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.txt {
+    font-size: 28px;
+}
+
+.inputs {
+    height: 20px;
+    width: 200px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 8px;
+    border: #FEAA00 solid 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+
+#botao {
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #FEAA00;
+}
+
+#beneficio {
+    display: none;
+    font-size: 20px;
+}
