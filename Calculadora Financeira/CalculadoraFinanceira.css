@@ -4,15 +4,15 @@ body {
     background-image: url('Calculadora Financeira - Background.png');
     background-repeat: no-repeat;
     background-size: contain;
-    color: antiquewhite;
+    color: #B3AFB2;
     font-family: 'Montserrat';
     height: 700px;
     width: 100%;
 }
 
 #content {
-    margin-top: 360px;
-    margin-left: 180px;
+    margin-top: 270px;
+    margin-left: 150px;
 }
 
 #content2{
@@ -37,6 +37,7 @@ body {
     border-radius: 5px;
     border: #FEAA00 solid 1.5px;
     background-color: transparent;
+    color: #B3AFB2;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 8px;
