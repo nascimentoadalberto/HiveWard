@@ -1,60 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,500&display=swap');
 
 body {
-    background-image: url('Calculadora Financeira - Background.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: #B3AFB2;
-    font-family: 'Montserrat';
-    height: 700px;
-    width: 100%;
+    /* configurações da imagem de fundo */
+        background-image: url('Calculadora Financeira - Background.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    /* configurações do texto */
+        color: #B3AFB2;
+        font-family: 'Montserrat';
+
+    /* configurações do tamanho da página */
+        height: 700px;
+        width: 100%;
 }
 
 #content {
-    margin-top: 270px;
-    margin-left: 150px;
+    /* div principal, com todo o conteúdo */
+        margin-top: 270px;
+        margin-left: 150px;
 }
 
 #content2{
-    display: flex;
+    /* div com os inputs e frases */
+        display: flex;
 }
 
 #titulo {
-    font-weight: 700;
-    font-size: 60px;
+    /* configurações do título da página */
+        font-weight: 700;
+        font-size: 60px;
 }
 
 .txt {
-    font-size: 28px;
+    /* configurações das frases dos inputs */
+        font-size: 28px;
 }
 
 .inputs {
-    height: 20px;
-    width: 200px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 5px;
-    border: #FEAA00 solid 1.5px;
-    background-color: transparent;
-    color: #B3AFB2;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 8px;
+    /* configurações dos inputs, tamanho e bordas */
+        height: 20px;
+        width: 200px;
+        border-radius: 5px;
+        border: #FEAA00 solid 1.5px;
+        background-color: transparent;
+
+    /* configurações do placeholder dos inputs */
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        color: #B3AFB2;
+
+    /* configurações das margens dos inputs */
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 8px;
 }
 
 #botao {
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 18px;
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
-    background-color: #FEAA00;
+    /* configurações do botão "Mostrar Benefícios", borda e margem interna */
+        border-radius: 10px;
+        padding: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+    /* configurações do texto e da cor de fundo do botão */
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 18px;
+        background-color: #FEAA00;
 }
 
 #beneficio {
-    display: none;
-    font-size: 20px;
+    /* configurações do resultado, com os innerHTML */
+        display: none;
+        font-size: 20px;
 }

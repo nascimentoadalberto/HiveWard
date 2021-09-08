@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira HiveWard</title>
+</head>
+
+<body
+    background="https://besthqwallpapers.com/Uploads/3-5-2019/89723/thumb2-honeycomb-texture-macro-food-textures-yellow-backgrounds-honeycomb.jpg">
+
+    <h1>Benefícios do HiveWard</h1>
+
+    
+          <h3><b> Coloque a sua renda anual de produção:</h3>
+        R$<input id="renda" placeholder="Renda anual"><br>
+
+        
+            <h3>Coloque o número de colméias perdidas:</h3>
+        <input id="colmeiasperdidas" placeholder="Colméias perdidas"><b><br><br>
+
+            <button onclick="beneficios()">Mostrar Benefícios</button>
+            <div id="beneficio"></div>
+</body>
+
+</html>
+
+<script>
+function beneficios(){
+    var Renda_anual = Number (renda.value);
+    var Renda_mensal = Number (Renda_anual / 12);
+    var Mel_mensal = Number (1,6);
+    var Perda_mel_mensal = Number(colmeiasperdidas.value * 1.6);
+    var Perda_mel_anual = Number(colmeiasperdidas.value * 20);
+    var Valor_sistema_un = Number (150); 
+    var Valor_sistema_manutencao = Number(70);
+    var Ganhos_sistema_anual = Number(colmeiasperdidas * 20);
+    var Ganhos_sistema_mensal = Number(Ganhos_sistema_anual / 12);
+
+beneficio.innerHTML =`<br><h3>
+Renda anual= R$ ${Renda_anual}<br>
+Renda mensal= R$ ${Renda_mensal.toFixed(2)}<br>
+Perdas mensais= R$ ${Perda_mel_mensal.toFixed(1)}<br>
+Perda anual R$ ${Perda_mel_anual.toFixed(1)}<br>
+Ganho anual <b>sem</b> o nosso serviço: R$ ${Renda_anual - Perda_mel_anual}<br>
+Ganho anual <b>com</b> o nosso serviço: R$ ${Renda_anual + Perda_mel_anual};</h3><br>
+`
+}
+
+</script>
