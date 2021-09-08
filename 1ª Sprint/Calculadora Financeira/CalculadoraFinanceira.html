@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira HiveWard</title>
+    <link rel="stylesheet" href="CalculadoraFinanceira.css">
+</head>
+
+<body>
+    <div id="content">
+        <span id="titulo">Benefícios do HiveWard</span><br><br>
+
+        <div id="content2">
+            <div id="textos">
+                <span class="txt">Digite a sua renda anual de produção em reais:</span><br>
+                <span class="txt">Digite o número de colméias perdidas:</span><br>
+                <span class="txt">Digite o número de colméias que você possui:</span>
+            </div>
+
+            <div id="entradas">
+                <input class="inputs" id="renda" placeholder="Renda anual"><br>
+                <input class="inputs" id="perdas" placeholder="Colméias perdidas"><br>
+                <input class="inputs" id="total_colmeias" placeholder="Total de colméias">
+            </div>
+        </div><br>
+
+        <button id="botao" onclick="beneficios()">Mostrar Benefícios</button><br><br>
+
+        <div id="beneficio">
+            Renda anual = R$ <u id="renda_anual_inner"></u><br>
+            Renda mensal = Aprox. R$ <u id="renda_mensal_inner"></u><br>
+            Perdas mensais = Aprox. R$ <u id="perda_mensal_inner"></u><br>
+            Perda anual = R$ <u id="perda_anual_inner"></u><br>
+            O lucro que seria obtido com o nosso serviço é de aprox. R$ <u id="ganho_com_inner"></u><br>
+            E o investimento na instalação será de R$ <u id="instalacao"></u>.
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+function beneficios(){
+    // Atribuição de valores às variáveis
+        var Mel_mensal = 1.6; // Produção mensal de mel por colmeia em quilos
+        var Valor_instalacao_unitario = 150.00; // Valor do arduino + sensor + mão de obra por colmeia
+        var Valor_sistema_manutencao = 70;
+
+    // Atribuição dos inputs às variáveis
+        var Renda_anual = Number(renda.value);
+        var Total_colmeias = Number(total_colmeias.value);
+
+
+    // Cálculos
+        var Valor_mel_mensal = Mel_mensal * 48; // Valor da produção mensal de mel por colmeia
+        var Valor_mel_anual = Valor_mel_mensal * 12;
+
+        var Perda_mel_mensal = Number(perdas.value * Mel_mensal);
+        var Perda_mel_anual = Number(perdas.value * 20); // A produção anual de mel por colmeia é de cerca de 20 quilos
+
+        var Renda_mensal = Number(Renda_anual / 12);
+        var Ganhos_sistema_anual = Number(perdas * 20);
+        var Ganhos_sistema_mensal = Number(Ganhos_sistema_anual / 12);
+
+        var Investimento = Total_colmeias * Valor_instalacao_unitario;
+
+
+    // Exibição das informações no corpo do HTML
+        beneficio.style.display = "block";
+
+        renda_anual_inner.innerHTML = Renda_anual.toFixed(2);
+        renda_mensal_inner.innerHTML = Renda_mensal.toFixed(2);
+        perda_mensal_inner.innerHTML = Perda_mel_mensal.toFixed(2);
+        perda_anual_inner.innerHTML = Perda_mel_anual.toFixed(2);
+        ganho_com_inner.innerHTML = (Renda_anual + Perda_mel_anual).toFixed(2);
+        instalacao.innerHTML = (Investimento).toFixed(2);
+}
+</script>
