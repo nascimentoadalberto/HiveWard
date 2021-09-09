@@ -41,6 +41,4 @@ select * from CxColmeias;
 insert into Produtos values (1, "Colmeia HiveWard", 150.00);
 select * from Produtos;
 
-update Clientes set nomeResponsavel = "Brad Pit Pereira" where idCliente = 1;
-
 
