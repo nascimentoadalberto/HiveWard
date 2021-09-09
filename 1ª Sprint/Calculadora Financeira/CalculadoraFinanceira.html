@@ -14,27 +14,29 @@
 
         <div id="content2">
             <div id="textos">
-                <span class="txt">Digite a sua renda anual de produção em reais:</span><br>
+                <span class="txt">Digite a sua produção mensal de mel em quilos:</span><br>
                 <span class="txt">Digite o número de colméias perdidas:</span><br>
-                <span class="txt">Digite o número de colméias que você possui:</span>
+                <span class="txt">Digite o número total de colméias:</span>
             </div>
 
             <div id="entradas">
-                <input class="inputs" id="renda" placeholder="Renda anual"><br>
+                <input class="inputs" id="mel_mensal" placeholder="Mel mensal"><br>
                 <input class="inputs" id="perdas" placeholder="Colméias perdidas"><br>
-                <input class="inputs" id="total_colmeias" placeholder="Total de colméias">
+                <input class="inputs" id="total" placeholder="Total de colméias">
             </div>
         </div><br>
 
         <button id="botao" onclick="beneficios()">Mostrar Benefícios</button><br><br>
 
         <div id="beneficio">
-            Renda anual = R$ <u id="renda_anual_inner"></u><br>
-            Renda mensal = Aprox. R$ <u id="renda_mensal_inner"></u><br>
+            Renda líquida média mensal = Aprox. R$ <u id="renda_mensal_inner"></u><br>
+            Renda líquida média anual = R$ <u id="renda_anual_inner"></u><br><br>
             Perdas mensais = Aprox. R$ <u id="perda_mensal_inner"></u><br>
-            Perda anual = R$ <u id="perda_anual_inner"></u><br>
-            O lucro que seria obtido com o nosso serviço é de aprox. R$ <u id="ganho_com_inner"></u><br>
-            E o investimento na instalação será de R$ <u id="instalacao"></u>.
+            Perda anual = R$ <u id="perda_anual_inner"></u><br><br>
+
+            Nosso objetivo é zerar as perdas, logo, o lucro mensal esperado com o nosso serviço é de aprox. R$ <u id="ganho_mensal_inner"></u>.<br>
+            O lucro anual esperado é de <u id="ganho_anual_inner"></u>, e o investimento na instalação será de R$ <u id="instalacao"></u>.<br>
+            O custo mensal para o painel de controle é de R$ 20,00.
         </div>
     </div>
 </body>
@@ -43,37 +45,31 @@
 <script>
 function beneficios(){
     // Atribuição de valores às variáveis
-        var Mel_mensal = 1.6; // Produção mensal de mel por colmeia em quilos
-        var Valor_instalacao_unitario = 150.00; // Valor do arduino + sensor + mão de obra por colmeia
-        var Valor_sistema_manutencao = 70;
-
-    // Atribuição dos inputs às variáveis
-        var Renda_anual = Number(renda.value);
-        var Total_colmeias = Number(total_colmeias.value);
-
+        var prod_mensal = Number(mel_mensal.value);
+        var perdas_colmeias = Number(perdas.value);
+        var total_colmeias = Number(total.value);
 
     // Cálculos
-        var Valor_mel_mensal = Mel_mensal * 48; // Valor da produção mensal de mel por colmeia
-        var Valor_mel_anual = Valor_mel_mensal * 12;
+        // Calculando o valor bruto
+        var valor_prod_mensal = prod_mensal * 48; // A média de preço da produção mensal do mel é de R$48,00
+        var valor_prod_anual = valor_prod_mensal * 12;
+        var investimento = (total_colmeias / 5) * 85;
 
-        var Perda_mel_mensal = Number(perdas.value * Mel_mensal);
-        var Perda_mel_anual = Number(perdas.value * 20); // A produção anual de mel por colmeia é de cerca de 20 quilos
-
-        var Renda_mensal = Number(Renda_anual / 12);
-        var Ganhos_sistema_anual = Number(perdas * 20);
-        var Ganhos_sistema_mensal = Number(Ganhos_sistema_anual / 12);
-
-        var Investimento = Total_colmeias * Valor_instalacao_unitario;
-
+        // Calculando o valor líquido
+        var valor_perdas_mensal = perdas_colmeias * 48;
+        var valor_perdas_anual = valor_perdas_mensal * 12;
+        var prod_liquida_mensal = valor_prod_mensal - valor_perdas_mensal;
+        var prod_liquida_anual = valor_prod_anual - valor_perdas_anual;
 
     // Exibição das informações no corpo do HTML
         beneficio.style.display = "block";
 
-        renda_anual_inner.innerHTML = Renda_anual.toFixed(2);
-        renda_mensal_inner.innerHTML = Renda_mensal.toFixed(2);
-        perda_mensal_inner.innerHTML = Perda_mel_mensal.toFixed(2);
-        perda_anual_inner.innerHTML = Perda_mel_anual.toFixed(2);
-        ganho_com_inner.innerHTML = (Renda_anual + Perda_mel_anual).toFixed(2);
-        instalacao.innerHTML = (Investimento).toFixed(2);
+        renda_mensal_inner.innerHTML = (prod_liquida_mensal).toFixed(2);
+        renda_anual_inner.innerHTML = (prod_liquida_anual).toFixed(2);
+        perda_mensal_inner.innerHTML = (valor_perdas_mensal).toFixed(2);
+        perda_anual_inner.innerHTML = (valor_perdas_anual).toFixed(2);
+        ganho_mensal_inner.innerHTML = (valor_prod_mensal).toFixed(2);
+        ganho_anual_inner.innerHTML = (valor_prod_anual).toFixed(2);
+        instalacao.innerHTML = (investimento).toFixed(2);
 }
 </script>
