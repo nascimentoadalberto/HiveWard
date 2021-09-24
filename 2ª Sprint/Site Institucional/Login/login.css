@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); /* esse comando importa a fonte do texto, e para definir é só colocar /font-family: 'o nome da fonte'/ sem as barras */
+
+/* os tamanhos vh e vw pegam o tamanho da tela, vh pela altura (view height) e vw pela largura (view width) */
+
+/* ===== DEFININDO A IMAGEM DE FUNDO E A FONTE DO TEXTO ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Login.png");
+    background-repeat: no-repeat; /* esse comando define que a imagem de fundo NÃO VAI se repetir quando chegar no limite */
+    background-position: center;
+    font-family: 'Montserrat', sans-serif; /* esse comando define a fonte importada na linha 1 */
+}
+
+/* ===== DIV PARA ALINHAR A IMAGEM DAS ABELHAS ===== */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== DIV COM A IMAGEM DAS ABELHAS ===== */
+#imagem {
+    background-image: url("Background.png");
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 85vw;
+    margin-top: 8vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+/* ===== DIV AUXILIAR, COM O TEXTO, BOTÕES E INPUTS ===== */
+#conteudo {
+    margin-right: 5vw;
+}
+
+/* ===== ESTILIZANDO O TÍTULO ===== */
+#titulo {
+    font-size: 4vh;
+    color: #B3AFB2;
+    font-weight: 700;
+    margin-bottom: 10vh;
+}
+
+#titulo2 {
+    font-size: 8vh;
+}
+
+#Hive {
+    color: #FEAA00;
+}
+
+/* ===== ESTILIZANDO OS INPUTS ===== */
+#inputs {
+    margin-top: 5vh;
+}
+
+input {
+    background-color: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px 18px 10px 18px;
+    font-size: 2.5vh;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2vh;
+    height: 2.4vh;
+    width: 35vh;
+}
+
+/* esse comando estiliza o placeholder dos inputs */
+input::placeholder {
+    color: #615412;
+}
+
+/* ===== ESTILIZANDO O BOTÃO DE LOGIN ===== */
+#botao_login {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #615412;
+    background-color: #FEC600;
+    border-style: none;
+    border-radius: 5px;
+    padding: 1.5vh 3vh;
+}
+
+/* esse comando estiliza o botão de login, quando passamos o mouse por cima */
+#botao_login:hover {
+    background-color: #FEAA00;
+}
+
+/* ===== ESTILIZANDO AS URLS DAS PÁGINAS DE CADASTRO E INICIAL ===== */
+#link_cadastro {
+    color: #615412;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+}
+
+#link_home {
+    margin-top: 2vh;
+    color: #615412;
+    font-size: 2vh;
+}
