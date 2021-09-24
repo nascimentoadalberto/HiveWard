@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("Login.png");
+    background-image: url("img/Login.png");
     background-repeat: no-repeat; /* esse comando define que a imagem de fundo NÃO VAI se repetir quando chegar no limite */
     background-position: center;
     font-family: 'Montserrat', sans-serif; /* esse comando define a fonte importada na linha 1 */
@@ -21,7 +21,7 @@ body {
 
 /* ===== DIV COM A IMAGEM DAS ABELHAS ===== */
 #imagem {
-    background-image: url("Background.png");
+    background-image: url("img/Background.png");
     background-repeat: no-repeat;
     height: 80vh;
     width: 85vw;
