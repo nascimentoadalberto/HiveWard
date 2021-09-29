@@ -6,14 +6,9 @@
 body {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    background-image: url("img/Login.png"); 
-    background-repeat: no-repeat; /* esse comando define que a imagem de fundo NÃO VAI se repetir quando chegar no limite */
-=======
     height: 100vh;
     background-image: url("img/Login_quadrado.png");
     background-repeat: repeat; /* esse comando define que a imagem de fundo VAI se repetir quando chegar no limite */
->>>>>>> 0e486cbfafaa44cd6919306f6160d05302cc80c8
     background-position: center;
     font-family: 'Montserrat', sans-serif; /* esse comando define a fonte importada na linha 1 */
 }
@@ -39,7 +34,6 @@ body {
     align-items: center;
     justify-content: flex-end;
     text-align: center;
-    background-position-x: right;
     background-size: cover;
 }
 
