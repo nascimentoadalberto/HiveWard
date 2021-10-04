@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="ajustes.css">
+    <link rel="shortcut icon" href="../assets/logo_icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="content">
+        <div id="main_container">
+            <div id="sidebar">
+                <span id="welcome">Bem vindo (a), <span id="name">Fernando Brandão</span></span>
+                <div id="navmenu">
+                    <div id="navmenu_start">
+                        <ul class="navmenu_list">
+                            <li id="painel">
+                                <a href="../home/home.html">Painel</a>
+                            </li>
+                            <li id="calendario">
+                                <a href="../calendario/calendario.html">Calendário</a>
+                            </li>
+                            <li id="especies">
+                                <a href="../especies/especies.html">Espécies</a>
+                            </li>
+                            <li id="duvidas">
+                                <a href="../duvidas/duvidas.html">Dúvidas</a>
+                            </li>
+                            <li id="ajustes">
+                                <a href="../ajustes/ajustes.html">Ajustes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="navmenu_end">
+                        <ul class="navmenu_list">
+                            <li id="home">Home</li>
+                            <li id="logout">Sair</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container2">
+                <div id="container2_header">
+                    <span id="title">Ajustes</span>
+                    <div id="container2_header_items">
+                        <input type="text" id="pesquisa" placeholder="Pesquisar">
+                    </div>
+                </div>
+
+                <div id="notificacoes">
+                    <span class="title">Notificações</span>
+                    <input type="checkbox" class="checkbox"> Notificar alertas de medição
+                    <input type="checkbox" class="checkbox"> Notificar quando curtirem uma dúvida
+                    <input type="checkbox" class="checkbox"> Notificar quando responderem uma dúvida
+                </div>
+
+                <div id="graficos">
+                    <span class="title">Gráficos</span>
+                    <input type="checkbox" id="ambas" class="checkbox"> Ver todas as medidas
+                    <input type="checkbox" id="temp" class="checkbox"> Ver apenas a temperatura
+                    <input type="checkbox" id="umid" class="checkbox"> Ver apenas a umidade
+                    Ver medições a cada <select name="" id="horas">
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="8">8</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                    </select> horas
+                </div>
+
+                <div id="conta">
+                    <span class="title">Conta</span>
+                    <input type="checkbox" class="checkbox"> Exibir meu e-mail nas perguntas
+                </div>
+
+                <div id="alterar_dados">
+                    <span class="title">Alterar dados</span>
+                    <span class="dados">Nome: </span>
+                    <span class="dados">E-mail: </span>
+                    <span class="dados">CPF/CNPJ: </span>
+                    <span class="dados">Senha: </span>
+                    <span class="dados">Confirmar senha: </span>
+                </div>
+
+                <div id="alterar_dados_inputs">
+                    <input type="text" id="senha" class="alteracao_nome" placeholder="Fernando Brandão">
+                    <input type="text" id="senha" class="alteracao_email" placeholder="fernando.brandao@bandtec.com.br">
+                    <input type="text" id="senha" class="alteracao_cpf" placeholder="123.456.789-0">
+                    <input type="text" id="senha" class="alteracao_senha" placeholder="••••••••">
+                    <input type="text" id="senha" class="alteracao_senha_confirmar" placeholder="••••••••">
+                </div>
+</body>
+</html>

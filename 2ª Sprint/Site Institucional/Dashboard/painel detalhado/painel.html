@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Detalhado</title>
+    <link rel="stylesheet" href="painel.css">
+    <link rel="shortcut icon" href="../assets/logo_icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="content">
+        <div id="main_container">
+            <div id="sidebar">
+                <span id="welcome">Bem vindo (a), <span id="name">Fernando Brandão</span></span>
+                <div id="navmenu">
+                    <div id="navmenu_start">
+                        <ul class="navmenu_list">
+                            <li id="painel">
+                                <a href="../home/home.html">Painel</a>
+                            </li>
+                            <li id="calendario">
+                                <a href="../calendario/calendario.html">Calendário</a>
+                            </li>
+                            <li id="especies">
+                                <a href="../especies/especies.html">Espécies</a>
+                            </li>
+                            <li id="duvidas">
+                                <a href="../duvidas/duvidas.html">Dúvidas</a>
+                            </li>
+                            <li id="ajustes">
+                                <a href="../ajustes/ajustes.html">Ajustes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="navmenu_end">
+                        <ul class="navmenu_list">
+                            <li id="home">Home</li>
+                            <li id="logout">Sair</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container2">
+                <div id="container2_header">
+                    <span id="title">Painel Detalhado</span>
+                    <div id="container2_header_items">
+                        <input type="text" id="pesquisa" placeholder="Pesquisar">
+                    </div>
+                </div>
+
+                <div id="grafico_container">
+                    <div id="grafico">
+                        <!-- local para o gráfico -->
+                    </div>
+
+                    <div class="medidas">
+                        <span class="subtitle">Média da última semana</span>
+                        <span class="temperatura_colmeia">30°</span>
+                        <span class="umidade_colmeia">52%</span>
+                    </div>
+
+                    <div id="check">
+                        <input type="checkbox" id="ambas"> Ver todas as medidas
+                        <input type="checkbox" id="temp"> Ver apenas a temperatura
+                        <input type="checkbox" id="umid"> Ver apenas a umidade
+                        <a href="../calendario/calendario.html">Ver as medidas mensais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
