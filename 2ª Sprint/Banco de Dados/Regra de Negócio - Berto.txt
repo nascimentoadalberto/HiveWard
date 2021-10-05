@@ -8,9 +8,9 @@
 -> Um cliente deve possuir pelo menos uma caixa;
 -> Cada caixa deverá ter um sensor de temperatura e umidade (DHT11);
 
--> Cada sensor deve medir as temperaturas e umidades durante o dia, 12 medições (a cada 2 horas);
+-> Cada sensor deve medir as temperaturas e umidades durante o dia, 24 medições (a cada 1 hora);
 -> Cada sensor deve pertencer a uma e somente uma caixa, e toda caixa deve ter um e somente um sensor;
--> O cliente pode escolher se quer ver as medições a cada 2, 4, 6, 12 ou 24 horas;
+-> O cliente pode escolher se quer ver as medições a cada 1, 2, 4, 6, 12 ou 24 horas;
 
 -> Um cliente deve ter pelo menos uma espécie de abelhas;
 -> Cada espécie deve ter um nome popular e um nome científico;
