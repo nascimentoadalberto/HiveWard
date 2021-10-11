@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 
 * {
     margin: 0;
@@ -35,6 +34,7 @@ body {
     border-radius: 20px 0px 0px 20px;
     color: #B3AFB2;
     font-size: 1.4vw;
+    padding-right: 2.5vw;
 }
 
 #welcome {
@@ -60,6 +60,10 @@ body {
     display: flex;
     align-items: center;
     color: #B3AFB2;
+}
+
+.navmenu_list .button_selected {
+    margin: 0 1.4vh 0 0;
 }
 
 .navmenu_list #especies {
@@ -97,7 +101,7 @@ body {
 
 .linespace {
     border: 1px solid #FEAA00;
-    margin: 0 6vh;
+    margin: 0 1.4vh 0 6vh;
 }
 
 .navmenu_end {
@@ -105,7 +109,7 @@ body {
 }
 
 .container2 {
-    padding: 6vh 8vh 0 8vh;
+    padding: 6vh 8vh 6vh 4vh;
 }
 
 .container2_header {
@@ -172,9 +176,10 @@ body {
 .especies_grid .especies_container {
     border: 1px solid #B3AFB2;
     border-radius: 1vh;
-    padding: 1.4vw;
-    margin: 1vh;
+    padding: 3vh 2vh;
+    margin: 1vh 2.4vh;
     display: flex;
+    font-size: 1.7vh;
 }
 
 .especies_grid .especies_container .especies_content {
