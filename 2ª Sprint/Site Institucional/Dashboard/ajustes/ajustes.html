@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajustes</title>
     <link rel="stylesheet" href="ajustes.css">
-    <link rel="shortcut icon" href="../assets/logo_icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/logo_icon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="content">
@@ -55,7 +55,7 @@
                             </a>
 
                             <a href="../ajustes/ajustes.html">
-                                <li id="ajustes">
+                                <li id="ajustes" class="button_selected">
                                     <div class="icone_container_selected">
                                         <img src="../assets/icon/navmenu_config_selected.svg" class="icone">
                                     </div>
@@ -88,56 +88,85 @@
                 </div>
             </div>
 
-            <div id="container2">
-                <div id="container2_header">
-                    <span id="title">Ajustes</span>
-                    <div id="container2_header_items">
+            <div class="container2">
+                <div class="container2_header">
+                    <div class="logo">
+                        <img src="../assets/icon/header_logo.svg" class="logotipo">
+                        <span id="title">Ajustes</span>
+                    </div>
+                    <div class="inputs">
+                        <img src="../assets/icon/header_notification.svg" class="notification">
                         <input type="text" id="pesquisa" placeholder="Pesquisar">
                     </div>
                 </div>
 
-                <div id="notificacoes">
-                    <span class="title">Notificações</span>
-                    <input type="checkbox" class="checkbox"> Notificar alertas de medição
-                    <input type="checkbox" class="checkbox"> Notificar quando curtirem uma dúvida
-                    <input type="checkbox" class="checkbox"> Notificar quando responderem uma dúvida
-                </div>
+                <div class="container2_body">
+                    <div class="grid_container">
+                        <div id="notificacoes">
+                            <span class="title">Notificações</span>
+                            <div class="check_container">
+                                <input type="checkbox" class="checkbox" checked> Notificar alertas de medição <br>
+                                <input type="checkbox" class="checkbox"> Notificar quando curtirem uma dúvida <br>
+                                <input type="checkbox" class="checkbox" checked> Notificar quando responderem uma dúvida
+                            </div>
+                        </div>
+                    </div>
 
-                <div id="graficos">
-                    <span class="title">Gráficos</span>
-                    <input type="checkbox" id="ambas" class="checkbox"> Ver todas as medidas
-                    <input type="checkbox" id="temp" class="checkbox"> Ver apenas a temperatura
-                    <input type="checkbox" id="umid" class="checkbox"> Ver apenas a umidade
-                    Ver medições a cada <select name="" id="horas">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="6">6</option>
-                        <option value="12">12</option>
-                        <option value="24">24</option>
-                    </select> horas
-                </div>
+                    <div class="grid_container">
+                        <div id="conta">
+                            <span class="title">Conta</span>
+                            <div class="check_container">
+                                <input type="checkbox" class="checkbox"> Exibir meu e-mail nas perguntas
+                            </div>
+                        </div>
+                    </div>
 
-                <div id="conta">
-                    <span class="title">Conta</span>
-                    <input type="checkbox" class="checkbox"> Exibir meu e-mail nas perguntas
-                </div>
+                    <div class="grid_container">
+                        <div id="graficos">
+                            <span class="title">Gráficos</span>
+                            <div class="check_container">
+                                <input type="checkbox" id="temp" class="checkbox" checked="checked"> Ver apenas a temperatura <br>
+                                <input type="checkbox" id="umid" class="checkbox" checked="checked"> Ver apenas a umidade <br>
+                                <div class="select_horas">
+                                    Ver medições a cada <select id="horas">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                    </select> horas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div id="alterar_dados">
-                    <span class="title">Alterar dados</span>
-                    <span class="dados">Nome: </span>
-                    <span class="dados">E-mail: </span>
-                    <span class="dados">CPF/CNPJ: </span>
-                    <span class="dados">Senha: </span>
-                    <span class="dados">Confirmar senha: </span>
-                </div>
+                    <div class="grid_container">
+                        <div id="alterar_dados">
+                            <span class="title">Alterar dados</span>
 
-                <div id="alterar_dados_inputs">
-                    <input type="text" id="senha" class="alteracao_nome" placeholder="Fernando Brandão">
-                    <input type="text" id="senha" class="alteracao_email" placeholder="fernando.brandao@bandtec.com.br">
-                    <input type="text" id="senha" class="alteracao_cpf" placeholder="123.456.789-0">
-                    <input type="text" id="senha" class="alteracao_senha" placeholder="••••••••">
-                    <input type="text" id="senha" class="alteracao_senha_confirmar" placeholder="••••••••">
+                            <div class="alterar_dados_container">
+                                <div id="alterar_dados_titulos">
+                                    <div class="alterar_dados_titulo">Nome: </div>
+                                    <div class="alterar_dados_titulo">E-mail: </div>
+                                    <div class="alterar_dados_titulo">CPF/CNPJ: </div>
+                                    <div class="alterar_dados_titulo">Senha: </div>
+                                    <div class="alterar_dados_titulo">Confirmar senha: </div>
+                                </div>
+
+                                <form class="alterar_dados_inputs">
+                                    <input type="text" class="alterar_dados_input" id="alteracao_nome" placeholder="Fernando Brandão"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_email" placeholder="fernando.brandao@bandtec.com.br"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_cpf" placeholder="123.456.789-0"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_senha" placeholder="••••••••"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_senha_confirmar" placeholder="••••••••"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
