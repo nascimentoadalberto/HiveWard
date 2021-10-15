@@ -2,12 +2,16 @@
 
 /* os tamanhos vh e vw pegam o tamanho da tela, vh pela altura (view height) e vw pela largura (view width) */
 
+* {
+    text-decoration: none;
+}
+
 /* ===== DEFININDO A IMAGEM DE FUNDO E A FONTE DO TEXTO ===== */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url("img/Login_quadrado.png");
+    background-image: url("assets/img/Login_quadrado.png");
     background-repeat: repeat; /* esse comando define que a imagem de fundo VAI se repetir quando chegar no limite */
     background-position: center;
     font-family: 'Montserrat', sans-serif; /* esse comando define a fonte importada na linha 1 */
@@ -24,11 +28,10 @@ body {
 
 /* ===== DIV COM A IMAGEM DAS ABELHAS ===== */
 #imagem {
-    background-image: url("img/Background.png");
+    background-image: url("assets/img/Background.png");
     background-repeat: no-repeat;
     height: 80vh;
     width: 85vw;
-    margin-top: 8vh;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -69,7 +72,7 @@ input {
     border-style: solid;
     border-color: #000000;
     padding: 10px 18px 10px 18px;
-    font-size: 2.5vh;
+    font-size: 2vh;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 2vh;
     height: 2.4vh;
@@ -82,32 +85,77 @@ input::placeholder {
 }
 
 /* ===== ESTILIZANDO O BOTÃO DE LOGIN ===== */
-#botao_login {
+.botao_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao_login {
     margin-top: 3vh;
-    margin-bottom: 2vh;
+    margin-bottom: 0.5vh;
     font-size: 3vh;
     font-family: 'Montserrat', sans-serif;
     color: #615412;
     background-color: #FEC600;
     border-style: none;
     border-radius: 5px;
-    padding: 1.5vh 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 2vh;
 }
 
 /* esse comando estiliza o botão de login, quando passamos o mouse por cima */
-#botao_login:hover {
+.botao_login:hover {
+    background-color: #FEAA00;
+    text-decoration: underline;
+}
+
+.botao_icon {
+    background-color: #FEAA00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5vh;
+    height: 6.5vh;
+    margin-left: 2vh;
+    border-radius: 5px;
+}
+
+.botao_icon:hover {
     background-color: #FEAA00;
 }
 
+.botao_icon img {
+    width: 3.5vh;
+}
+
 /* ===== ESTILIZANDO AS URLS DAS PÁGINAS DE CADASTRO E INICIAL ===== */
-#link_cadastro {
-    color: #615412;
-    margin-bottom: 2vh;
+.link_cadastro {
+    margin-bottom: 1vh;
     font-size: 2vh;
 }
 
-#link_home {
+.link_home {
     margin-top: 2vh;
-    color: #615412;
     font-size: 2vh;
+}
+
+.link_cadastro a {
+    color: #615412;
+}
+
+.link_home a {
+    color: #615412;
+}
+
+.link_cadastro a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.link_home a:hover {
+    text-decoration: underline;
+    font-weight: 700;
 }

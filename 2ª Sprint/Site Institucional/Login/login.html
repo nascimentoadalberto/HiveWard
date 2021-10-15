@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiveWard</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="shortcut icon" href="img/logo_icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Login/assets/icon/logo_icon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -20,16 +20,21 @@
 
                 <div id="inputs">
                     <input type="text" placeholder="E-mail válido" id="input_email"><br>
-                    <input type="password" placeholder="Senha" id="input_senha"><br>
-                    <a href="../Cadastro/cadastro.html">
-                        <button id="botao_login">Login <i class="fas fa-arrow-right"></i></button>
+                    <input type="password" placeholder="Senha (8 caracteres ou mais)" id="input_senha"><br>
+                    <a class="botao_container">
+                        <button class="botao_login" onclick="verificar()">
+                            Login
+                            <div class="botao_icon">
+                                <img src="assets/icon/arrow.svg" alt="">
+                            </div>
+                        </button>
                     </a><br>
                 </div>
 
-                <div id="link_cadastro">
+                <div class="link_cadastro">
                     <a id="link_cadastro" href="../Cadastro/cadastro.html">ou cadastre-se</a>
                 </div>
-                <div id="link_home">
+                <div class="link_home">
                     <a id="link_home" href="../Página Inicial/home.html">Voltar à página inicial</a>
                 </div>
             </div>
@@ -37,3 +42,18 @@
     </div>
 </body>
 </html>
+
+<script>
+    function verificar() {
+        // quando conectar com o banco de dados, adicionar um if que verifica se o cadastro ainda não existe
+
+        if (input_email.value == "" || input_senha.value == "") {
+            alert("Insira seus dados!")
+        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7) {
+            alert("Login bem sucedido!");
+            window.location.assign("../Dashboard/home/home.html")
+        } else {
+            alert("Verifique se seu e-mail ou sua senha estão corretos.");
+        }
+    }
+</script>

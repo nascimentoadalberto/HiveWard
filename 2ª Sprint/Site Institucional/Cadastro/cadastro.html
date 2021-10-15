@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="assets/icon/logo_icon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>pudim</h1>
-    essa é a tela de cadastro. <br>
-    <a href="../Login/login.html">clique aqui</a> para voltar para a tela de login
+    <div class="container">
+        <div class="imagem">
+            <div class="conteudo">
+                <div class="titulo">Faça seu cadastro na <br>
+                    <div class="titulo2">
+                        <span class="Hive">Hive</span>Ward
+                    </div>
+                </div>
+                <div id="inputs">
+                    <input placeholder="Nome Completo" id="input_nome"><br>
+                    <input placeholder="E-mail Válido" id="input_email"><br>
+                    <input placeholder="CPF/CNPJ" id="input_cpf"><br>
+                    <input placeholder="Senha (8 caracteres ou mais)" id="input_senha" type="password"><br>
+                    <a class="botao_container">
+                        <button class="botao_login" onclick="verificar()">
+                            Cadastrar-se 
+                            <div class="botao_icon">
+                                <img src="/Cadastro/assets/icon/arrow.svg" alt="">
+                            </div>
+                        </button>
+                    </a><br>
+                </div>
+
+                <div class="link_cadastro">
+                    <a id="link_login" href="../Login/login.html">ou faça login</a>
+                </div>
+                <div class="link_home">
+                    <a id="link_home" href="../Página Inicial/home.html">Voltar à página inicial</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+    function verificar() {
+        // quando conectar com o banco de dados, adicionar um if que verifica se o cadastro já existe
+
+        if (input_email.value == "" || input_senha.value == "" || input_cpf.value == "" || input_nome.value == "") {
+            alert("Insira seus dados!")
+        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7) {
+            alert("Cadastro bem sucedido!");
+        }
+    }
+</script>
