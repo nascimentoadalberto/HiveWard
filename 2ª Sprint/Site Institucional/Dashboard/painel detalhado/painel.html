@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Detalhado</title>
     <link rel="stylesheet" href="painel.css">
-    <link rel="shortcut icon" href="../assets/logo_icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/logo_icon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="content">
@@ -88,30 +88,43 @@
                 </div>
             </div>
 
-            <div id="container2">
-                <div id="container2_header">
-                    <span id="title">Painel Detalhado</span>
-                    <div id="container2_header_items">
+            <div class="container2">
+                <div class="container2_header">
+                    <div class="logo">
+                        <img src="../assets/icon/header_logo.svg" class="logotipo">
+                        <span id="title">Painel Detalhado</span>
+                    </div>
+                    <div class="inputs">
+                        <img src="../assets/icon/header_notification.svg" class="notification">
                         <input type="text" id="pesquisa" placeholder="Pesquisar">
                     </div>
                 </div>
 
-                <div id="grafico_container">
-                    <div id="grafico">
+                <div class="grafico_container">
+                    <div class="grafico_content">
                         <!-- local para o gráfico -->
+                        <img src="../assets/img/grafico_exemplo.png" class="grafico">
                     </div>
 
-                    <div class="medidas">
-                        <span class="subtitle">Média da última semana</span>
-                        <span class="temperatura_colmeia">30°</span>
-                        <span class="umidade_colmeia">52%</span>
-                    </div>
+                    <div class="info_content">
+                        <div class="medidas_container">
+                            <div class="medidas_content">
+                                <span class="subtitle">Média da última semana</span>
+                                <div class="medidas">
+                                    <img src="../assets/icon/medida_termometro.svg" class="icon_term"> 30°
+                                    <img src="../assets/icon/medida_umidade.svg" class="icon_umid"> 52%
+                                </div>
+                            </div>
+                        </div>
 
-                    <div id="check">
-                        <input type="checkbox" id="ambas"> Ver todas as medidas
-                        <input type="checkbox" id="temp"> Ver apenas a temperatura
-                        <input type="checkbox" id="umid"> Ver apenas a umidade
-                        <a href="../calendario/calendario.html">Ver as medidas mensais</a>
+                        <div class="check">
+                            <div class="check_temp">
+                                <input type="checkbox" id="temp" class="checkbox" checked> Ver a temperatura
+                            </div>
+                            <div class="check_umid">
+                                <input type="checkbox" id="umid" class="checkbox" checked> Ver a umidade
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

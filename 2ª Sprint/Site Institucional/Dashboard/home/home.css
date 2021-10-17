@@ -15,7 +15,7 @@ body {
 #content {
     background-image: url('../assets/img/background.png');
     background-size: cover;
-    padding: 9vh 0 10vh 0;
+    padding: 8.7vh 0 10vh 0;
 }
 
 #main_container {
@@ -103,7 +103,190 @@ body {
 }
 
 
-#container2 {
+.container2 {
+    padding: 6vh 8vh 2vh 4vh;
     color: #B3AFB2;
 }
 
+.container2_header {
+    width: 58vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2_header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.container2_header #title {
+    font-size: 4.5vh;
+    color: #FEAA00;
+    margin-left: 1.5vw;
+}
+
+.container2_header .logotipo {
+    width: 4vw;
+}
+
+.container2_header .inputs {
+    display: flex;
+}
+
+.container2_header .inputs .notification {
+    height: 4vh;
+    margin-right: 1.3vw;
+}
+
+.container2_header .inputs #pesquisa {
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    width: 13vw;
+    padding: 0.3vw 0.8vw 0.3vw 0.8vw;
+    border-radius: 0.3vw
+}
+
+.container2_header .inputs #pesquisa::placeholder {
+    background-image: url(../assets/icon/header_pesquisa_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    color: #B3AFB2;
+}
+
+.container2_body {
+    display: flex;
+    padding-top: 4vh;
+}
+
+.container2_body .container2_body_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 55vh;
+}
+
+.container2_body .container2_body_left .dashboard_left_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container2_body .container2_body_left .dashboard_left_header .conteudo_condensado {
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+    display: flex;
+    padding: 2vh 1.35vh;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.dashboard_left_header .conteudo_condensado img {
+    width: 5vh;
+}
+
+.dashboard_left_header .conteudo_condensado .conteudo_condensado_content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.7vh;
+}
+
+.conteudo_condensado_content .subtitle {
+    font-size: 1.5vh;
+    font-style: italic;
+    margin-bottom: 0.5vh;
+}
+
+.conteudo_condensado_content .valor {
+    font-size: 2.5vh;
+}
+
+.container2_body_left .grafico_container {
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+    padding: 2vh;
+    color: #B3AFB2;
+    font-size: 1.8vh;
+}
+
+.container2_body_left .grafico_container img {
+    width: 45vh;
+    margin-top: 1vh;
+}
+
+.container2_body_right .colmeias {
+    display: flex;
+    padding: 1.2vw 0.7vw;
+    margin: 0 0 0 2vw;
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.container2_body_right .colmeias .colmeias_header {
+    display: flex;
+    align-items: center;
+    padding-left: 2vh;
+}
+
+.container2_body_right .colmeias .colmeias_header img {
+    width: 6.5vh;
+}
+
+.container2_body_right .colmeias .subtitle {
+    font-size: 1.5vw;
+    padding: 0 0 0 3vh;
+    margin: 0;
+}
+
+.container2_body_right .colmeias .colmeias_links {
+    display: flex;
+    margin: 1vh 0.5vh;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container2_body_right .colmeias .colmeias_links a {
+    border: 1.5px solid #FEC600;
+    border-radius: 5px;
+    padding: 1.2vh 1.5vh;
+    margin: 1vh 0.5vh;
+    color: #B3AFB2;
+}
+
+.container2_body_right .colmeias .colmeias_links a .medicao_colmeia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vh 0;
+}
+
+.container2_body_right .colmeias .colmeias_links a .medicao_colmeia .nome_colmeia {
+    align-self: flex-start;
+    padding-left: 1vh;
+}
+
+.container2_body_right .colmeias .colmeias_links a .medicao_colmeia .medicao_colmeia_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+.medicao_colmeia .medicao_colmeia_content img {
+    width: 2.7vh;
+}
+
+.medicao_colmeia .medicao_colmeia_content .umid_img {
+    margin-left: 1.5vh;
+}

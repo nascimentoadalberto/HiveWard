@@ -88,79 +88,166 @@
                 </div>
             </div>
 
-            <div id="container2">
-                <div id="container2_header">
-                    <span id="title">Painel</span>
-                    <div id="container2_header_items">
+            <div class="container2">
+                <div class="container2_header">
+                    <div class="logo">
+                        <img src="../assets/icon/header_logo.svg" class="logotipo">
+                        <span id="title">Painel</span>
+                    </div>
+                    <div class="inputs">
+                        <img src="../assets/icon/header_notification.svg" class="notification">
                         <input type="text" id="pesquisa" placeholder="Pesquisar">
                     </div>
                 </div>
 
-                <div id="dashboard_content">
-                    <div id="caixas" class="conteudo_condensado">
-                        <span class="subtitle">Número de caixas</span>
-                        <span class="valor">25</span>
+                <div class="container2_body">
+                    <div class="container2_body_left">
+                        <div id="dashboard_content">
+                            <div class="dashboard_left_header">
+                                <div id="caixas" class="conteudo_condensado">
+                                    <img src="../assets/icon/home_bee.svg" class="conteudo_condensado_img">
+                                    <div class="conteudo_condensado_content">
+                                        <span class="subtitle">Número de caixas</span>
+                                        <span class="valor">25</span>
+                                    </div>
+                                </div>
+                                <div id="temp_media" class="conteudo_condensado">
+                                    <img src="../assets/icon/medida_termometro.svg" class="conteudo_condensado_img">
+                                    <div class="conteudo_condensado_content">
+                                        <span class="subtitle">Temperatura média</span>
+                                        <span class="valor">32°</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grafico">
+                                <!-- local para o gráfico -->
+                                <a href="../painel detalhado/painel.html">
+                                    <div class="grafico_container">
+                                        <span class="subtitle">Clique para acessar detalhes do gráfico</span>
+                                        <img src="../assets/img/grafico_exemplo.png" class="grafico_content">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div id="temp_media" class="conteudo_condensado">
-                        <span class="subtitle">Temperatura média</span>
-                        <span class="valor">32°</span>
-                    </div>
 
-                    <div class="grafico">
-                        <span class="subtitle">Gráfico de temperatura e umidade</span>
-                        <!-- local para o gráfico -->
-                        <a href="../painel detalhado/painel.html">local para o gráfico</a>
-                    </div>
-
-                    <div id="colmeias">
-                        <span class="subtitle">Suas Colmeias</span>
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
+                    <div class="container2_body_right">
+                        <div class="colmeias">
+                            <div class="colmeias_header">
+                                <img src="../assets/icon/home_colmeias_icon.svg" alt="" class="colmeias_header_img">
+                                <span class="subtitle">Suas Colmeias</span>
                             </div>
-                        </a>
+                            <div class="colmeias_links">
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
-                            </div>
-                        </a>
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
-                            </div>
-                        </a>
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
-                            </div>
-                        </a>
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
-                            </div>
-                        </a>
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        <a href="../colmeia/colmeia.html">
-                            <div class="medicao_colmeia">
-                                <span class="nome_colmeia">Colmeia A</span>
-                                <span class="temperatura_colmeia">31°</span>
-                                <span class="umidade_colmeia">48%</span>
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia">31°</span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia">48%</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

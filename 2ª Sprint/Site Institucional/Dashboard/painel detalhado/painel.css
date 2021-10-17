@@ -101,3 +101,117 @@ body {
 .navmenu_end {
     padding-top: 2vh;
 }
+
+.container2 {
+    padding: 6vh 8vh 2vh 4vh;
+    color: #B3AFB2;
+}
+
+.container2_header {
+    width: 58vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2_header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.container2_header #title {
+    font-size: 4.5vh;
+    color: #FEAA00;
+    margin-left: 1.5vw;
+}
+
+.container2_header .logotipo {
+    width: 4vw;
+}
+
+.container2_header .inputs {
+    display: flex;
+}
+
+.container2_header .inputs .notification {
+    height: 4vh;
+    margin-right: 1.3vw;
+}
+
+.container2_header .inputs #pesquisa {
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    width: 13vw;
+    padding: 0.3vw 0.8vw 0.3vw 0.8vw;
+    border-radius: 0.3vw
+}
+
+.container2_header .inputs #pesquisa::placeholder {
+    background-image: url(../assets/icon/header_pesquisa_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    color: #B3AFB2;
+}
+
+.grafico_container {
+    display: flex;
+    padding: 1.5vw 0 1vw 1.5vw;
+    margin-top: 5vh;
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+}
+
+.grafico_container .grafico_content .grafico {
+    width: 70vh;
+}
+
+.grafico_container .info_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 3vw;
+    align-items: center;
+}
+
+.grafico_container .medidas_container {
+    margin-bottom: 3.5vw;
+}
+
+.grafico_container .medidas_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    border-radius: 0.3vw;
+    margin-top: 4vh;
+    padding: 1vh 3.5vh;
+}
+
+.grafico_container .medidas_content .medidas {
+    margin: 3vh 0 1vh 0;
+    display: flex;
+    align-items: center;
+}
+
+.grafico_container .medidas_content .medidas img {
+    width: 2.7vh;
+}
+
+.grafico_container .subtitle {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2vh;
+}
+
+.grafico_container .check {
+    font-size: 1.6vh;
+}
+.grafico_container .check .checkbox {
+    margin-top: 1vh;
+}
