@@ -229,8 +229,10 @@ body {
     color: #B3AFB2;
 }
 
-.container2_body .grid_container .alterar_dados_titulo {
-    margin-top: 1vh;
+.container2_body .grid_container #alterar_dados_titulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container2_body .check_container {
