@@ -50,8 +50,14 @@
 
         if (input_email.value == "" || input_senha.value == "" || input_cpf.value == "" || input_nome.value == "") {
             alert("Insira seus dados!")
-        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7) {
-            alert("Cadastro bem sucedido!");
+        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7 && input_nome.value.includes(" ")) {
+            if (!input_cpf.value.length == 11 || !input_cpf.value.length == 14) {
+                alert("Verifique seu CPF/CNPJ!");
+            } else if (input_email.value == "@.com") {
+                alert("Insira um email válido!");
+            } else {
+                alert("Cadastro bem sucedido!");
+            }
         }
     }
 </script>
