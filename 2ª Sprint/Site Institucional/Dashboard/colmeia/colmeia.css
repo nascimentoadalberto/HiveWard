@@ -15,7 +15,7 @@ body {
 #content {
     background-image: url('../assets/img/background.png');
     background-size: cover;
-    padding: 9vh 0 10vh 0;
+    padding:8.5vh 0 10vh 0;
 }
 
 #main_container {
@@ -159,7 +159,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1.5vw 5vw 1.5vw 2.5vw;
-    margin: 5vh 2vh;
+    margin: 5vh 0;
     background: #08151E;
     border: 1px solid #B3AFB2;
     border-radius: 1vh;
@@ -195,7 +195,7 @@ body {
 }
 
 .grafico .medidas_container {
-    margin-bottom: 3.5vw;
+    margin-bottom: 2.5vw;
 }
 
 .grafico .medidas_content {
