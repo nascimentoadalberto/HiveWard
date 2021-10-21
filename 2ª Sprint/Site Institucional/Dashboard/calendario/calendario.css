@@ -101,3 +101,68 @@ body {
 .navmenu_end {
     padding-top: 2vh;
 }
+#container2 {
+    padding: 6vh 8vh 4vh 4vh;
+}
+#container2_header{
+    width: 58vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#container2_header #title {
+    font-size: 4.5vh;
+    color: #FEAA00;
+    margin-left: 1.5vw;
+}
+#container2_header_items #pesquisa{
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    width: 13vw;
+    padding: 0.3vw 0.8vw 0.3vw 0.8vw;
+    border-radius: 0.3vw
+}
+#container2_header_items #pesquisa::placeholder {
+    background-image: url(../assets/icon/header_pesquisa_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    color: #B3AFB2;
+}
+#container2_header .logo {
+    display: flex;
+    align-items: center;
+}
+#container2_header #month-header {
+    color: #B3AFB2;
+    font-size: 2.5vh;
+}
+.calendar-content{
+    margin-top: 5vh;
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+    padding: 3vh 3vh;
+    height: 50vh;
+    width: fit-content;
+}
+.day-of-week, .date{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.day-of-week > * {
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    border-right: 1px solid #F5C324;
+    color: #B3AFB2;
+    margin-bottom: 2vh;
+}
+.date > * {
+    border: 1px solid #F5C324;
+    padding: 25px;
+    color: #B3AFB2;
+    width: 5vw;
+    text-align: end;
+}
