@@ -1,6 +1,4 @@
     var context = document.getElementById("chart").getContext("2d");
-    context.canvas.width = 1000;
-    context.canvas.height = 300;
     
     var configuration = {
         type: 'line',
@@ -8,8 +6,9 @@
             datasets: [{
                 label: "Temperatura",
                 type: 'line',
-                borderColor: ['#ff3232'],
-                backgroundColor: ['#ff7f7f']
+                borderColor: ['#FEAA00'],
+                backgroundColor: ['#F5C324'],
+                borderWidth: 5
             }]
         },
         options: {
@@ -46,35 +45,35 @@
     this.lastIndexTemp = 0;
     this.time = 0;
 
-    function get_data(){
+    // function get_data(){
 
-        var http = new XMLHttpRequest();
-        http.open('GET', 'http://localhost:3000/api', false);
-        http.send(null);        
+    //     var http = new XMLHttpRequest();
+    //     http.open('GET', 'http://localhost:3000/api', false);
+    //     http.send(null);        
         
-        var obj = JSON.parse(http.responseText);
-        if (obj.data.length == 0){
-            return;
-        }
+    //     var obj = JSON.parse(http.responseText);
+    //     if (obj.data.length == 0){
+    //         return;
+    //     }
 
-        var _lastIndexTemp = this.lastIndexTemp;
-        this.lastIndexTemp = obj.data.length;
-        listTemp = obj.data.slice(_lastIndexTemp);
+    //     var _lastIndexTemp = this.lastIndexTemp;
+    //     this.lastIndexTemp = obj.data.length;
+    //     listTemp = obj.data.slice(_lastIndexTemp);
 
-        listTemp.forEach(data => {
-            //Máximo de 60 itens exibidos no gráfico
-            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
-                chart.data.labels.shift();
-                chart.data.datasets[0].data.shift();
-            }
+    //     listTemp.forEach(data => {
+    //         //Máximo de 60 itens exibidos no gráfico
+    //         if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+    //             chart.data.labels.shift();
+    //             chart.data.datasets[0].data.shift();
+    //         }
 
-            chart.data.labels.push(this.time++);
-            chart.data.datasets[0].data.push(parseFloat(data));
-            chart.update();
-        });
+    //         chart.data.labels.push(this.time++);
+    //         chart.data.datasets[0].data.push(parseFloat(data));
+    //         chart.update();
+    //     });
         
-        document.getElementById('average').textContent = obj.average;
-    } 
+    //     document.getElementById('average').textContent = obj.average;
+    // } 
 
     setInterval(() => {
         get_data();

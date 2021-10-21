@@ -212,13 +212,16 @@ body {
     padding: 2vh;
     color: #B3AFB2;
     font-size: 1.8vh;
-    width: 300px;
+    width: 45vh;
 }
 
-.container2_body_left .grafico_container img {
+.container2_body_left .grafico_container section {
     width: 45vh;
+    height: 33vh;
     margin-top: 1vh;
 }
+
+
 
 .container2_body_right .colmeias {
     display: flex;
