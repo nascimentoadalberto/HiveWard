@@ -7,6 +7,9 @@
     <title>Dia 03/10</title>
     <link rel="stylesheet" href="calendario-detalhado.css">
     <link rel="shortcut icon" href="../assets/icon/logo_icon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 </head>
 <body>
     <div id="content">
@@ -100,10 +103,14 @@
                     </div>
                 </div>
 
-                <div class="grafico_container">
+                <div class="grafico">
                     <div class="grafico_content">
                         <!-- local para o gráfico -->
-                        <img src="../assets/img/grafico_exemplo.png" class="grafico">
+                        <div class="grafico_container">
+                            <section>
+                                <canvas id="chart"></canvas>
+                            <section>
+                        </div>
                     </div>
 
                     <div class="info_content">
@@ -139,4 +146,5 @@
         </div>
     </div>
 </body>
+<script src="../assets/home.js"></script>
 </html>

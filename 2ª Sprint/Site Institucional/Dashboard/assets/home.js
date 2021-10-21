@@ -3,26 +3,44 @@
     var configuration = {
         type: 'line',
         data: {
-            datasets: [{
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00'],
+            datasets: [
+            {
                 label: "Temperatura",
                 type: 'line',
                 borderColor: ['#FEAA00'],
                 backgroundColor: ['#F5C324'],
-                borderWidth: 5
-            }]
+                borderWidth: 5,
+                width: 10,
+                stack: 'combined'
+            },
+            {
+                label: "Umidade",
+                type: 'line',
+                borderColor: ['#0066FE'],
+                backgroundColor: ['#0093FE'],
+                borderWidth: 5,
+                stack: 'combined'
+            }
+        ]
         },
         options: {
+            maintainAspectRatio: false,
             scales: {
                 xAxes: [{
                     distribution: 'series',
                     ticks: {
                         beginAtZero:true
+                    }, 
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Tempo'
                     }
                 }],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Temperatura'
+                        labelString: 'Medida'
                     },
                     ticks: {
                         beginAtZero:true
@@ -75,6 +93,6 @@
     //     document.getElementById('average').textContent = obj.average;
     // } 
 
-    setInterval(() => {
-        get_data();
-    }, 1000);
+    // setInterval(() => {
+    //     get_data();
+    // }, 1000);

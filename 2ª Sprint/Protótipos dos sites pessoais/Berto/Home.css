@@ -1,1 +1,22 @@
-/* css da homepage do berto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contents_container {
+    padding: 2.5vh 20vh;
+}
+
+.navbar {
+    background-color: #031b4e;
+}
+
+.navbar .header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    padding: 0 5vh;
+}
+
