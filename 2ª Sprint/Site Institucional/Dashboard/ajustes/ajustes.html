@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="ajustes.css">
+    <link rel="shortcut icon" href="../assets/icon/logo_icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="content">
+        <div id="main_container">
+            <div id="sidebar">
+                <div id="welcome">
+                    <span id="main_title">Bem vindo (a), <br><span id="name">Fernando Brandão</span></span>
+                </div>
+                <div class="navmenu">
+                    <div class="navmenu_start">
+                        <ul class="navmenu_list">
+                            <a href="../home/home.html">
+                                <li id="painel" class="selected">
+                                    <div class="icone_container">
+                                        <img src="../assets/icon/navmenu_painel.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt_selected">Painel</span>
+                                </li>
+                            </a>
+
+                            <a href="../calendario/calendario.html">
+                                <li id="calendario">
+                                    <div class="icone_container">
+                                        <img class="icone" src="../assets/icon/navmenu_calendar.svg">
+                                    </div>
+                                    <span class="navmenu_txt">Calendário</span>
+                                </li>
+                            </a>
+
+                            <a href="../especies/especies.html">
+                                <li id="especies">
+                                    <div class="icone_container">
+                                        <img src="../assets/icon/navmenu_especies.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt">Espécies</span>
+                                </li>
+                            </a>
+
+                            <a href="../duvidas/duvidas.html">
+                                <li id="duvidas">
+                                    <div class="icone_container">
+                                        <img src="../assets/icon/navmenu_duvidas.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt">Dúvidas</span>
+                                </li>
+                            </a>
+
+                            <a href="../ajustes/ajustes.html">
+                                <li id="ajustes" class="button_selected">
+                                    <div class="icone_container_selected">
+                                        <img src="../assets/icon/navmenu_config_selected.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt">Ajustes</span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="linespace"></div>
+                    <div class="navmenu_end">
+                        <ul class="navmenu_list">
+                            <a href="#">
+                                <li id="home">
+                                    <div class="icone_container">
+                                        <img src="../assets/icon/navmenu_home.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt">Home</span>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li id="logout">
+                                    <div class="icone_container">
+                                        <img src="../assets/icon/navmenu_logout.svg" class="icone">
+                                    </div>
+                                    <span class="navmenu_txt">Sair</span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container2">
+                <div class="container2_header">
+                    <div class="logo">
+                        <img src="../assets/icon/header_logo.svg" class="logotipo">
+                        <span id="title">Ajustes</span>
+                    </div>
+                    <div class="inputs">
+                        <img src="../assets/icon/header_notification.svg" class="notification">
+                        <input type="text" id="pesquisa" placeholder="Pesquisar">
+                    </div>
+                </div>
+
+                <div class="container2_body">
+                    <div class="grid_container">
+                        <div id="notificacoes">
+                            <span class="title">Notificações</span>
+                            <div class="check_container">
+                                <input type="checkbox" class="checkbox" checked> Notificar alertas de medição <br>
+                                <input type="checkbox" class="checkbox"> Notificar quando curtirem uma dúvida <br>
+                                <input type="checkbox" class="checkbox" checked> Notificar quando responderem uma dúvida
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_container">
+                        <div id="conta">
+                            <span class="title">Conta</span>
+                            <div class="check_container">
+                                <input type="checkbox" class="checkbox"> Exibir meu e-mail nas perguntas
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_container">
+                        <div id="graficos">
+                            <span class="title">Gráficos</span>
+                            <div class="check_container">
+                                <input type="checkbox" id="temp" class="checkbox" checked="checked"> Ver apenas a temperatura <br>
+                                <input type="checkbox" id="umid" class="checkbox" checked="checked"> Ver apenas a umidade <br>
+                                <div class="select_horas">
+                                    Ver medições a cada <select id="horas">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                    </select> horas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_container">
+                        <div id="alterar_dados">
+                            <span class="title">Alterar dados</span>
+
+                            <div class="alterar_dados_container">
+                                <div id="alterar_dados_titulos">
+                                    <div class="alterar_dados_titulo">Nome: </div>
+                                    <div class="alterar_dados_titulo">E-mail: </div>
+                                    <div class="alterar_dados_titulo">CPF/CNPJ: </div>
+                                    <div class="alterar_dados_titulo">Senha: </div>
+                                    <div class="alterar_dados_titulo">Confirmar senha: </div>
+                                </div>
+
+                                <form class="alterar_dados_inputs">
+                                    <input type="text" class="alterar_dados_input" id="alteracao_nome" placeholder="Fernando Brandão"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_email" placeholder="fernando.brandao@bandtec.com.br"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_cpf" placeholder="123.456.789-0"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_senha" placeholder="••••••••"><br>
+                                    <input type="text" class="alterar_dados_input" id="alteracao_senha_confirmar" placeholder="••••••••"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

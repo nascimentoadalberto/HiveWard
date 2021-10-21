@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap%27');
+
+body {
+    /* Cor de fundo */
+       background-image: url(assets/Login.png);
+       background-repeat: no-repeat;
+       background-size: cover;
+    /* configurações do texto */
+        color: #B3AFB2;
+        font-family:"Montserrat";
+        font-size: 25px;
+    /* configurações do tamanho da página */
+        height: 110vh;
+        width: 90vw; 
+        scrollbar-face-color: #FEAA00;
+    }
+    .logo_img{
+        width:15vh ;
+         margin-top: 14px; 
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .header .container{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    .navbar{
+        padding: 24px;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+    }
+    .navbar a{
+        text-decoration: none;
+        color: #B3AFB2;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .navbar input{
+        /* configurações dos inputs, tamanho e bordas */
+        height: 20px;
+        width: 200px;
+        border-radius: 4px;
+        border: #FEAA00 solid 2.8px;
+        background-color: transparent;
+
+    /* configurações do placeholder dos inputs */
+        font-family:'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        color: #B3AFB2;
+    }
+    .navbar input::placeholder{
+        background-image: url(file:///C:/Users/Fenanda%20Lima/Desktop/BandTec/Faculdade/Sprint%202/HiveWard/2%C2%AA%20Sprint/Site%20Institucional/Dashboard/assets/icon/header_pesquisa_icon.svg);
+        background-repeat: no-repeat;
+        background-position: right; 
+        padding: 0.1vw 0.4vw 0.1vw 0.5vw;
+       
+     }
+     .active{
+        border-bottom: 3px solid #FFDf0D;
+    }
+    .nav-item a:hover{
+        transition: left 500ms;
+    }
+    .content {
+        /* div principal, com todo o conteúdo */
+        margin-top: 55px;
+        margin-left: 110px;
+        width: 1155px;
+        height: 525px;
+        border: solid #FEAA00;
+        border-radius: 30px;
+        font-family: 'Montserrat';
+        font-size: 9px;
+        background: linear-gradient(180deg, rgba(8, 21, 30, 0.6) 3.62%, rgba(8, 10, 11, 0.6) 63.02%, rgba(3, 3, 8, 0.6) 100%);
+    }   
+    .content2{
+        /* div com os inputs e frases */
+            display: flex;
+    }
+
+    #titulo {
+        /* configurações do título da página */
+            font-weight: 700;
+            font-size: 50px;
+    }
+    .titulo{
+        color: white;
+    }.hive{
+
+        color: #FEAA00;
+    }
+    .txt {
+        /* configurações das frases dos inputs */
+            font-size: 28px;   
+    }
+    .inputs {
+        /* configurações dos inputs, tamanho e bordas */
+            height: 20px;
+            width: 200px;
+            border-radius: 5px;
+            border: #FEAA00 solid 1.5px;
+            background-color: transparent;
+
+        /* configurações do placeholder dos inputs */
+            font-family:'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            color: #B3AFB2;
+
+        /* configurações das margens dos inputs */
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 8px;
+    }
+    #botao {
+        /* configurações do botão "Mostrar Benefícios", borda e margem interna */
+            border-radius: 10px;
+            padding: 5px;
+            padding-left: 8px;
+            padding-right: 8px;
+
+        /* configurações do texto e da cor de fundo do botão */
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 18px;
+            background-color: #FEAA00;
+    }
+
+    #beneficio {
+        /* configurações do resultado, com os innerHTML */
+            display: none;
+            font-size: 20px;
+    }
+
+    .move{
+      
+        margin-top: 58px;
+        margin-left: 37px;
+    }
+    .fas, .fa-user-circle{
+        font-size: 30px;
+        margin-left: 15px;
+        color: #FEAA00;
+    }
+    

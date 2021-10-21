@@ -1,0 +1,219 @@
+/* FONTE USADA NO SITE */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #B3AFB2;
+}
+ul{
+    list-style-type: none;
+}
+/* CABEÇALHO */
+body{
+    background-image: linear-gradient(to bottom, #464227,rgb(9, 8, 8),rgb(25, 30, 51),#464227);
+}
+.container{
+    background-image: url(../assets/img/honeycomb-34984\ 2.png); 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.header{
+    height: 25vh;
+    margin: 0 auto;
+}
+.nav-item{
+    display: inline;
+    margin-left: 50px;
+}
+.nav-item a{
+    font-size: 18px;
+}
+.active{
+    border-bottom: 3px solid #FFDf0D;
+}
+.nav-item a:hover{
+    transition: left 500ms;
+}
+.nav-list{
+    margin-right: 250px;
+}
+.navbar{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.nav-logo img{
+    width: 100px;
+}
+.nav-logo h1{
+    font-size: 50px;
+    margin-left: 25px;
+    color: #f39400 ;
+    cursor: default;
+}
+#hiveWard_logo{
+    color: white;
+}
+
+.fas, .fa-user-circle{
+    font-size: 30px;
+    margin-left: 15px;
+}
+.search-form{
+    display: flex;
+    align-items: center;
+}
+.form-search input{
+    height: 28px;
+    width: 200px;
+    border: 2px solid #FFDf0D;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #B3AFB2;
+}
+.form-search input::placeholder{
+    padding-left: 6px;
+    color: #B3AFB2;
+}
+
+
+/* FIRST SECTION */
+.content{
+    margin: 0 100px 0 100px;
+}
+#first_section{
+    display: flex;
+    justify-content: space-between;
+}
+.section-title, .section-subtitle{
+    color: #FEC600;
+    font-size: 70px;
+}
+.section-subtitle{
+    font-weight: 300;
+}
+.section-description{
+    color: #B3AFB2;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+.section-image img{
+    width: 500px;
+}
+.btn_saibaMais{
+    padding-left: 8px;
+    background-color: #FEC600;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+.btn_saibaMais a{
+    color: #000;
+}
+#subline{
+    width: 30%;
+    border-color: #FEC600;
+    margin: 10px 0 10px 0;
+}
+i .fas,.fa-arrow-right {
+    background-color: #f39400;
+    font-size: inherit;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+/* SECOND SECTION */
+#second_section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* THIRD SECTION */
+#third_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first_section, #second_section, #third_section{
+    margin-bottom: 50px;
+}
+
+/* FOOTER */
+.footer{
+    bottom: 0;
+    margin-top: 10%;
+}
+.social-media, .services{
+    border-right: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+}
+.social-media .footer-list .footer-item a i{
+    font-size: 40px;
+}
+.social-media .footer-list .footer-item a i:hover{
+    color: #c59f12;
+}
+.footer-item{
+    display: inline;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-item{
+    margin-right: 15px;
+}
+.footer-item a{
+    margin-right: 10px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+i{
+    font-size: 25px;
+    color: #FEC600;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+}
+.logo-footer img{
+    width: 100px;
+}
+.logo-footer h1{
+    font-size: 50px;
+    margin-left: 25px;
+    color: #f39400 ;
+    cursor: default;
+}
+#hiveWard_logo{
+    color: white;
+}
+.copyright-footer{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+.copyright-footer p{
+    color: #B3AFB2;
+    cursor: default;
+}

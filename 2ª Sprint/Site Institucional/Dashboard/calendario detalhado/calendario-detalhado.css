@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background-image: url('../assets/img/background.png');
+    background-size: cover;
+    padding: 8.5vh 0 10vh 0;
+}
+
+#main_container {
+    display: flex;
+    margin: 0 8vw 0 8vw;
+    border: 5px solid #F5C324;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(8, 21, 30, 0.6) 3.62%, rgba(8, 10, 11, 0.6) 63.02%, rgba(3, 3, 8, 0.6) 100%);
+}
+
+#sidebar {
+    width: 20vw;
+    height: 80vh;
+    background: #08151E;
+    border-radius: 20px 0px 0px 20px;
+    color: #B3AFB2;
+    font-size: 1.4vw;
+}
+
+#welcome {
+    margin: 5vh 0 5vh 2vw;
+}
+
+#welcome #name {
+    font-weight: 700;
+}
+
+.navmenu a {
+    color: #B3AFB2;
+}
+
+.navmenu_list {
+    margin-left: 2.8vw;
+}
+
+.navmenu_list li {
+    list-style: none;
+    margin: 2vh 6vh 2vh 0;
+    border-radius: 0.5vh;
+    display: flex;
+    align-items: center;
+    color: #B3AFB2;
+}
+
+.navmenu_list #calendario {
+    color: #08151C;
+    background-color: #FEC600;
+}
+
+.navmenu_list li .icone_container_selected {
+    background-color: #FEAA00;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 0.5vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navmenu_list li .icone_container {
+    width: 6vh;
+    height: 6vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navmenu_list li .icone {
+    width: 4vh;
+}
+
+.navmenu_start {
+    padding-bottom: 2vh;
+}
+
+.linespace {
+    border: 1px solid #FEAA00;
+    margin: 0 6vh;
+}
+
+.navmenu_end {
+    padding-top: 2vh;
+}
+
+.container2 {
+    padding: 6vh 8vh 2vh 4vh;
+    color: #B3AFB2;
+}
+
+.container2_header {
+    width: 58vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2_header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.container2_header #title {
+    font-size: 4.5vh;
+    color: #FEAA00;
+    margin-left: 1.5vw;
+}
+
+.container2_header .logotipo {
+    width: 4vw;
+}
+
+.container2_header .inputs {
+    display: flex;
+}
+
+.container2_header .inputs .notification {
+    height: 4vh;
+    margin-right: 1.3vw;
+}
+
+.container2_header .inputs #pesquisa {
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    width: 13vw;
+    padding: 0.3vw 0.8vw 0.3vw 0.8vw;
+    border-radius: 0.3vw
+}
+
+.container2_header .inputs #pesquisa::placeholder {
+    background-image: url(../assets/icon/header_pesquisa_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    color: #B3AFB2;
+}
+
+.grafico_container {
+    display: flex;
+    padding: 1.5vw 0 2vw 1.5vw;
+    margin-top: 5vh;
+    background: #08151E;
+    border: 1px solid #B3AFB2;
+    border-radius: 1vh;
+}
+
+.grafico_container .grafico_content .grafico {
+    width: 65vh;
+    align-self: center;
+}
+
+.grafico_container .info_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.grafico_container .medidas_container {
+    margin-bottom: 3.5vw;
+}
+
+.grafico_container .medidas_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #FEC600;
+    border-radius: 0.3vw;
+    margin-top: 4vh;
+    padding: 1vh 3.5vh;
+}
+
+.grafico_container .medidas_content .medidas {
+    margin: 3vh 0 1vh 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.99vh;
+}
+
+.grafico_container .medidas_content .medidas img {
+    width: 2.7vh;
+}
+
+.grafico_container .medidas_content .medidas .icon_umid {
+    margin-left: 1.2vh;
+}
+
+.grafico_container .subtitle {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2vh;
+}
+
+.grafico_container .check {
+    font-size: 1.6vh;
+}
+.grafico_container .check .checkbox {
+    margin-top: 1vh;
+}
