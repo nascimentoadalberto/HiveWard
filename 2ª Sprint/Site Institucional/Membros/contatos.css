@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    background-image: linear-gradient(to bottom, #464227,rgb(9, 8, 8),rgb(25, 30, 51),#464227);
+    background-repeat: no-repeat;
+   
+}
+.container{
+     margin-left: 2.5vw;
+     margin-right:2.5vw;  
+}
+.max-container {
+  background-image: url(assets/honeycomb-34984\ 2.png);
+  margin: 0 auto; 
+}
+a {
+    text-decoration: none;
+    color:#B3AFB2;
+}
+ul{
+    list-style: none;
+    margin-top: 10vh;
+}
+
+.header{
+    height: 25vh;
+    margin: 0 auto;
+}
+.nav-item{
+    display: inline;
+    margin-left: 6vh;
+    font-size: 18px;
+}
+/* Transição */
+.active{
+    border-bottom: 3px solid #FFDf0D;
+}
+.nav-item a:hover{
+    transition: left 500ms;
+}
+/* Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+   
+}
+.nav-logo img{
+    width: 15vh;
+}
+.nav-logo h1{
+    
+    font-size: 9vh;
+    margin-left: 2px;
+    color: #f39400 ;
+    cursor: default;
+    font-weight: bold;
+}
+.ward{
+    color: #FFF;
+    font-weight: bold;
+}
+
+/* Icone user */
+.fas, .fa-user-circle{
+    font-size: 30px;
+    margin-left: 15px;
+}
+.navbar input{
+    /* configurações dos inputs, tamanho e bordas */
+    height: 20px;
+    width: 200px;
+    border-radius: 4px;
+    border: #FFDf0D solid 2.8px;
+    background-color: transparent;
+    font-family:'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 2vw;
+}
+.navbar input::placeholder{
+    background-image: url(assets/header_pesquisa_icon.svg);
+    background-repeat: no-repeat;
+    background-position: right; 
+    padding: 0.1vw 0.4vw 0.1vw 0.5vw;  
+ }
+ .navbar input::placeholder{
+    color:#B3AFB2 ;
+ }
+    .tittle h2{
+    color: #FFDf0D;
+    margin-top: 1vh;
+    font-size: 7vh;
+    margin-left: 2vh;
+    font-family: 'Montserrat';
+    
+}
+.img_person{
+    width: 35vh; 
+   border-radius: 1vh;
+   border: #FEC600 solid;
+}
+.person-right{
+    width: 35vh;
+    margin-left: 65vw;
+    line-height: 42px
+}
+.person-right h2{
+    color: #FEC600;
+    font-size: 8vh;
+    border-right: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+    margin: 20px;
+    padding: 20px;
+}
+.person-left h2{
+    color: #FEC600;
+    font-size: 8vh;
+    border-left: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+    margin: 20px;
+    padding: 20px;
+}
+.person-right{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.person-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* h2.h2-right{
+    width: 100px;
+} */
+
+
+
+
+
+/* footer */
+.footer{
+    bottom: 0;
+    margin-top: 10%;
+}
+.social-media, .services{
+    border-right: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+}
+.social-media .footer-list .footer-item a i{
+    font-size: 40px;
+}
+.social-media .footer-list .footer-item a i:hover{
+    color: #c59f12;
+}
+.footer-item{
+    display: inline;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-item{
+    margin-right: 1vh;
+}
+.footer-item a{
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+i{
+    font-size: 2vw;
+    color: #FEC600;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+}
+.logo-footer img{
+    width: 10vh;
+}
+.logo-footer h1{
+    font-size: 50px;
+    margin-left: 25px;
+    color: #f39400 ;
+    cursor: default;
+}
+#hiveWard_logo{
+    color: white;
+}
+.copyright-footer{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+.copyright-footer p{
+    color: #B3AFB2;
+    cursor: default;
+}
