@@ -144,7 +144,7 @@ body {
     border: 1px solid #B3AFB2;
     border-radius: 1vh;
     padding: 3vh 3vh;
-    height: 50vh;
+    height: fit-content;
     width: fit-content;
 }
 .day-of-week, .date{
@@ -155,9 +155,9 @@ body {
     text-align: center;
     font-size: 1em;
     letter-spacing: 0.1em;
-    border-right: 1px solid #F5C324;
     color: #B3AFB2;
     margin-bottom: 2vh;
+    border: 1px solid #B3AFB2;
 }
 .date > * {
     border: 1px solid #F5C324;
@@ -169,4 +169,13 @@ body {
 
 ::-webkit-scrollbar {
     width: 0;
+}
+
+.date > td > a > i{
+    color: #F5C324;
+    font-size: 20px;
+    text-align: start;
+}
+.date > td > a > i{
+    padding-right: 2.8vw;
 }
