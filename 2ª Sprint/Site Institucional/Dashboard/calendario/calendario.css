@@ -166,3 +166,7 @@ body {
     width: 5vw;
     text-align: end;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

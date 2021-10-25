@@ -291,3 +291,7 @@ body {
 .medicao_colmeia .medicao_colmeia_content .umid_img {
     margin-left: 1.5vh;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

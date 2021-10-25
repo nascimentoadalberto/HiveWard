@@ -233,3 +233,7 @@ body {
 .grafico .check .checkbox {
     margin-top: 1vh;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

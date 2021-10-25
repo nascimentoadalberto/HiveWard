@@ -243,3 +243,7 @@ body {
     font-size: 3.4vh;
     margin-bottom: 2vh;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

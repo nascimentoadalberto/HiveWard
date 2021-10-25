@@ -101,3 +101,7 @@ body {
 .navmenu_end {
     padding-top: 2vh;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

@@ -159,3 +159,7 @@ input::placeholder {
     text-decoration: underline;
     font-weight: 700;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

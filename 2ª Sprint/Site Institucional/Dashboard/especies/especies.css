@@ -210,3 +210,7 @@ body {
 .especies_grid .especies_container .nome_especie {
     font-weight: 700;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}
