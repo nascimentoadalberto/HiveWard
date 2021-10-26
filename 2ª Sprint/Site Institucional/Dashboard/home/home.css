@@ -292,6 +292,12 @@ body {
     margin-left: 1.5vh;
 }
 
+.medicao_colmeia .situacao {
+    background-color: limegreen;
+    height: 2vh;
+    width: 5vw;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
