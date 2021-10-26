@@ -7,6 +7,10 @@
     text-decoration: auto;
 }
 
+* a {
+    color: #B3AFB2;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +19,7 @@ body {
 #content {
     background-image: url('../assets/img/background.png');
     background-size: cover;
-    padding: 8.5vh 0 10vh 0;
+    padding: 9vh 0 10vh 0;
 }
 
 #main_container {
@@ -58,6 +62,7 @@ body {
     display: flex;
     align-items: center;
     color: #B3AFB2;
+    padding-right: 5vh;
 }
 
 .navmenu_list #calendario {
@@ -161,21 +166,17 @@ body {
 }
 .date > * {
     border: 1px solid #F5C324;
-    padding: 25px;
+    padding: 2vh 1.5vw;
     color: #B3AFB2;
     width: 5vw;
-    text-align: end;
-}
-
-::-webkit-scrollbar {
-    width: 0;
 }
 
 .date > td > a > i{
     color: #F5C324;
-    font-size: 20px;
-    text-align: start;
+    font-size: 3vh;
+    padding-right: 4vh;
 }
-.date > td > a > i{
-    padding-right: 2.8vw;
+
+::-webkit-scrollbar {
+    width: 0;
 }

@@ -1,37 +1,4 @@
-
-<!doctype html>
-<html>
-
-<head>
-	<title>Line Chart</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-	<style>
-		canvas {
-			-moz-user-select: none;
-			-webkit-user-select: none;
-			-ms-user-select: none;
-		}
-	</style>
-</head>
-
-<body>
-	<div>
-		<h1>Sensor LM35 - Temperatura</h1>
-			<section>
-				<h2>Média: <label id='average'>0.00</label></h2>
-			</section>
-			<section style="width:100%">
-				<canvas id="chart"></canvas>
-		<section>
-	</div>
-	
-	<script>
-
-		var context = document.getElementById("chart").getContext("2d");
-		context.canvas.width = 1000;
-		context.canvas.height = 300;
+var context = document.getElementById("chart").getContext("2d");
         
         var configuration = {
 			type: 'line',
@@ -39,13 +6,17 @@
 				datasets: [{
 					label: "Temperatura",
 					type: 'line',
-					borderColor: ['#ff3232'],
-					backgroundColor: ['#ff7f7f']
+					borderColor: ['#FEAA00'],
+					backgroundColor: ['#F5C324']
 				}]
 			},
 			options: {
 				scales: {
 					xAxes: [{
+                        scaleLabel: {
+							display: true,
+							labelString: 'Horário'
+                        },
 						distribution: 'series',
                         ticks: {
                             beginAtZero:true
@@ -110,8 +81,3 @@
         setInterval(() => {
 			get_data();
         }, 1000);
-
-	</script>
-</body>
-
-</html>

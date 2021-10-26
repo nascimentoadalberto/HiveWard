@@ -20,7 +20,7 @@ class ArduinoRead {
 
             if (this.listData.length === 59) {
                 let sum = this.listData.reduce((a, b) => a + b, 0);
-                this.listDataHour.push((sum / this.listData.length).toFixed(2));
+                // this.listDataHour.push((sum / this.listData.length).toFixed(2));
                 while (this.listData.length > 0) {
                     this.listData.pop();
                 } 

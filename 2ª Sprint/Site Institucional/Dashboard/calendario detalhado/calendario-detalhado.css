@@ -159,17 +159,18 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1.5vw 5vw 1.5vw 2.5vw;
-    margin: 5vh 0;
+    margin: 5vh 0 0 0;
     background: #08151E;
     border: 1px solid #B3AFB2;
     border-radius: 1vh;
+    height: 52vh;
 }
 
 .grafico .grafico_content {
     border: 1px solid #B3AFB2;
     border-radius: 1vh;
     align-self: center;
-    padding: 3vh;
+    padding: 5vh;
     height: 35vh;
     width: 60vh;
     display: flex;
@@ -183,7 +184,7 @@ body {
 }
 
 .grafico_container canvas {
-    height: 29vh;
+    height: 32vh;
 }
 
 .grafico .info_content {
