@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esportes</title>
+</head>
+<body style="background-color: lightsalmon">
+    <b>Entre com o nome e a idade do atleta:</b>
+    <br><br>
+    <input id="Nome" type="text">
+    <br><br>
+    <input id="Idade" type="text">
+    <br><br>
+    <b>Selecione a modalidade</b>
+    <select id="sel">
+        <option value="">Selecione a atividade</option>
+        <option value="correr">Correr</option>
+        <option value="nadar">Nadar</option>
+        <option value="pedalar">Pedalar</option>
+    </select>
+    <br><br>
+    <button style="background-color:black; color:white" onclick="Praticar()">Praticar esporte</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function Praticar(){
+        var verificar = Nome.value;
+        var idade = idade.value;
+
+        if(verificar == 3 && idade <= 18 && idade >=80) {
+            div_msg.innerHTML = "ok"
+        } else {
+            div_msg.innerHTML = "o"
+        }
+    }
+</script>

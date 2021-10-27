@@ -1,0 +1,144 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 40%;
+}
+
+.header{
+    color: #32b9cd;
+    border-bottom: 3px solid #32b9cd;
+    font-weight: bolder;
+    background-image: url("./imagens-institucional/1587423249589.jfif");
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.selecionado{
+    font-weight: bolder;
+}
+
+.navbar{
+    width: 400px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: right;
+    list-style: none;
+    
+}
+
+.header a {
+    text-decoration: none;
+    color: #32b9cd;
+}
+
+.banner {
+    height: 478px;
+    background-image: url("./imagens-institucional/Team-Liquid-Banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    padding-left: 0px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-left: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.banner .container {
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.banner p {
+    margin: 0px;
+    padding: 0;
+    width: 280px;
+    height: 150px;
+    font-size: 36px;
+    margin-left: 350px;
+    
+}
+
+.social {
+    background-image: url("./imagens-institucional/temliquid.png");
+    justify-content: center;
+}
+
+.social h2{
+    display: flex;
+    padding: 20px;
+    background-color: #32b9cd;
+    border-radius: 20px;
+    align-self: center ;
+    justify-self: center;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.social .boxes{
+    display: flex;
+}
+
+.social .box{
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+}
+
+.social .box img{
+    width: 150px;
+    align-self: center;
+
+}
+
+.social .titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.footer {
+    background-image: url("https://i.pinimg.com/originals/e9/9b/10/e99b10a6fc5740e1e566050efe96cff3.gif");
+    height: 250px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #32b9cd;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+.social .container{
+    width: 100%;
+    background-color: #0A1723;
+}
