@@ -15,15 +15,19 @@
 <body>
     <div class="header">
         <div class="container">
-            <div>
+            <a href="../Página Inicial/home.html" class="logo_container">
                 <img class="logo_img" src="assets/logo_icon.ico">
-            </div>
-            <h1 class="titulo"><span class="hive">Hive</span>Ward</h1>
+                <h1 class="titulo"><span class="hive">Hive</span>Ward</h1>
+            </a>
             <ul class="navbar" id="nav-list">
-                <li class="nav-item"><a href="../Página Inicial/index.html">Home</a></li>
-                <li class="nav-item active"><a href="#">Simulador Financeiro</a></li>
-                <input id="pesquisar" placeholder="Pesquisar">
-                <a href="#"><i class="fas fa-user-circle"></i></a>
+                <li class="nav-item">
+                    <a href="../Página Inicial/home.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#">Simulador Financeiro</a>
+                </li>
+                <!-- <input id="pesquisar" placeholder="Pesquisar"> -->
+                <a href="../Cadastro/cadastro.html"><i class="fas fa-user-circle"></i></a>
             </ul>
         </div>
     </div>
@@ -45,7 +49,7 @@
                 </div>
             </div><br>
 
-            <button id="botao" onclick="beneficios()">Mostrar Benefícios</button><br><br>
+            <button id="botao" onclick="verificar()">Mostrar Benefícios</button><br><br>
 
             <div id="beneficio">
                 Renda líquida média mensal = Aprox. R$ <u id="renda_mensal_inner"></u><br>
@@ -66,6 +70,15 @@
 </html> 
 
 <script>
+    // função de verificação dos inputs
+    function verificar() {
+        if(mel_mensal.value == "" || perdas.value == "" || total.value == ""){
+            alert("Insira algo!")
+        } else {
+            beneficios();
+        }
+    }
+
     function beneficios() {
         // Atribuição de valores às variáveis
         var prod_mensal = Number(mel_mensal.value);

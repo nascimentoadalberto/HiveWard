@@ -18,7 +18,7 @@ body{
     background-image: linear-gradient(to bottom, #464227,rgb(9, 8, 8),rgb(25, 30, 51),#464227);
 }
 .container{
-    background-image: url(../assets/img/honeycomb-34984\ 2.png); 
+    background-image: url(./assets/img/honeycomb-34984\ 2.png); 
     overflow: hidden;
     margin: 0 auto;
 }
@@ -45,10 +45,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 3.4vw;
 }
 .nav-logo{
     display: flex;
     align-items: center;
+    
 }
 .nav-logo img{
     width: 100px;
@@ -62,7 +64,9 @@ body{
 #hiveWard_logo{
     color: white;
 }
-
+.user-profile {
+    margin-left: 4vw;
+}
 .fas, .fa-user-circle{
     font-size: 30px;
     margin-left: 15px;
@@ -99,11 +103,12 @@ body{
 }
 .section-subtitle{
     font-weight: 300;
+    font-size: 40px;
 }
 .section-description{
     color: #B3AFB2;
     margin-bottom: 8px;
-    font-size: 20px;
+    font-size: 3vh;
 }
 .section-image img{
     width: 500px;
@@ -226,7 +231,7 @@ i{
     right: 0;
     width: 10px;
     height: 100%;
-    background: rgba (255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 #progressbar {

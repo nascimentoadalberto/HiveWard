@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap%27');
 
+* {
+    text-decoration: none;
+}
+
 body {
     /* Cor de fundo */
         background-image: url(assets/Login.png);
@@ -10,31 +14,37 @@ body {
         font-family:"Montserrat";
         font-size: 25px;
     /* configurações do tamanho da página */
-        height: 110vh;
-        width: 90vw; 
+        /* height: 110vh;
+        width: 90vw;  */
         scrollbar-face-color: #FEAA00;
     }
     .logo_img{
         width:15vh ;
-          margin-top: 14px; 
+        margin-top: 14px; 
     }
     .container{
-        width: 80%;
-        margin: 0 auto;
+        padding: 0 10vw;
+    }
+
+    .logo_container {
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
     .header .container{
         display:flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .navbar{
         padding: 24px;
-        width: 600px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         list-style: none;
+    }
+    .navbar li {
+        margin-right: 2vw;
     }
     .navbar a{
         text-decoration: none;
@@ -97,6 +107,7 @@ body {
 
     .titulo{
         color: white;
+        padding-left: 2vw;
     }
 
     .hive{

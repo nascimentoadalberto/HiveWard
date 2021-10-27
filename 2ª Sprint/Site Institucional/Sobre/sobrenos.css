@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+a {
+    color: #B3AFB2;
 }
 .header{
     height: 25vh;
@@ -17,7 +21,8 @@ header {
 }
 .container{
     padding:0;
-    background-image: url("./img/honeycomb-34984\ 2.png");
+    background-image: url("assets/img/honeycomb-34984\ 2.png");
+    background-repeat: repeat;
     margin: 0;
 }
 .nav-item{
@@ -34,13 +39,14 @@ header {
     transition: left 500ms;
 }
 .nav-list{
-    margin-right: 250px;
+    margin-right: 3vw;
 }
 .navbar{
     margin: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10vw;
 }
 .nav-logo{
     display: flex;
@@ -67,31 +73,34 @@ header {
     display: flex;
     align-items: center;
 }
-.form-search input{
-    height: 28px;
-    width: 200px;
-    border: 2px solid #FFDf0D;
-    border-radius: 2px;
-    background-color: transparent;
-    color: #B3AFB2;
-}
-.form-search input::placeholder{
-    padding-left: 6px;
-    color: #B3AFB2;
-}
 
-#s_nos{
-    margin-left: 2vh;
+.s_nos{
+    padding-left: 10vw;
     display: flex;
-    font-size: 5vh;
+    font-size: 6vh;
     color:#FEC600;
     font-weight: bold;
+}
+
+.img_txt {
+    color: #B3AFB2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10vw;
+    font-size: 3vh;
+}
+
+.img_txt img {
+    width: 80vw;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
 }
 
 /* FOOTER */
 .footer{
     bottom: 0;
-    margin-top: 10%;
 }
 .social-media, .services{
     border-right: 3px solid #FEC600;
@@ -147,4 +156,48 @@ i{
 .copyright-footer p{
     color: #B3AFB2;
     cursor: default;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba (255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    animation: animate 5s linear infinite;
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    filter: blur(10px);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    filter: blur(30px);
 }
