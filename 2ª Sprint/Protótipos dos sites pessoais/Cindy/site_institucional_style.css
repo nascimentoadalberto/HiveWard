@@ -1,0 +1,112 @@
+body.home {
+    padding: 0;
+    margin: 0;
+    background-image: url("imagens/bolo_morango_sarah.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header{
+    color: white;
+    border-bottom: solid white;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagem {
+    width: 90px;
+}
+
+.titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.selecionado {
+    font-size: bold;
+}
+
+.banner {
+    color: white;
+    height: 600px;
+}
+
+.banner .container {
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.banner h3 {
+    font-size: 50px;
+    margin-left: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.icon {
+    width: 40px;
+}
+
+body.cardapio {
+    background-color: rgba(137, 149, 173, 0.733);
+   
+}
+
+.social {
+    background-color: #E5E5E5;
+    padding: 50px 0;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social h2 {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: #E6005A;
+    margin: 0;
+}
+
+.social .boxes {
+    display: flex;
+}
+
+.social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+}
+
