@@ -1,140 +1,94 @@
 create database Hiveward;
 use Hiveward;
 
--- -----------------------------------------------------
--- Table `mydb`.`Clientes`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Clientes (
-  `idClientes` INT NOT NULL AUTO_INCREMENT,
-  `Nome` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Senha` VARCHAR(45) NOT NULL,
-  `CPFCNPJ` VARCHAR(45) NOT NULL,
-  `Empresa` VARCHAR(45) NOT NULL,
-  `Rede_social` VARCHAR(45) NULL,
-  PRIMARY KEY (`idClientes`))
-ENGINE = InnoDB;
+  idClientes INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(45) NOT NULL,
+  Email VARCHAR(45) NOT NULL,
+  Senha VARCHAR(45) NOT NULL,
+  CPFCNPJ VARCHAR(45) NOT NULL,
+  Empresa VARCHAR(45),
+  Rede_social VARCHAR(45)
+);
 
-
--- -----------------------------------------------------
--- Table `mydb`.`Especies`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Especies (
-  `idEspecies` INT NOT NULL,
-  `Nome_popular` VARCHAR(45) NOT NULL,
-  `Nome_cientifico` VARCHAR(45) NOT NULL,
-  `fk_cliente` INT NOT NULL,
-  PRIMARY KEY (`idEspecies`),
-  INDEX `fk_Especies_Clientes1_idx` (`fk_cliente` ASC) VISIBLE,
-  CONSTRAINT `fk_Especies_Clientes1`
-    FOREIGN KEY (`fk_cliente`)
-    REFERENCES `mydb`.`Clientes` (`idClientes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  idEspecies INT NOT NULL PRIMARY KEY auto_increment,
+  Nome_popular VARCHAR(45) NOT NULL,
+  Nome_cientifico VARCHAR(45) NOT NULL,
+  fk_cliente INT NOT NULL,
+    FOREIGN KEY (fk_cliente) REFERENCES Clientes (idClientes)
+);
 
-
--- -----------------------------------------------------
--- Table `mydb`.`Caixas`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Caixas (
-  `idCaixas` INT NOT NULL AUTO_INCREMENT,
-  `Temperatura` VARCHAR(45) NULL,
-  `Umidade` VARCHAR(45) NULL,
-  `Caixascol` VARCHAR(45) NULL,
-  `fk_cliente` INT NOT NULL,
-  `fk_especie` INT NOT NULL,
-  PRIMARY KEY (`idCaixas`),
-  INDEX `fk_Caixas_Clientes1_idx` (`fk_cliente` ASC) VISIBLE,
-  INDEX `fk_Caixas_Especies1_idx` (`fk_especie` ASC) VISIBLE,
-  CONSTRAINT `fk_Caixas_Clientes1`
-    FOREIGN KEY (`fk_cliente`)
-    REFERENCES `mydb`.`Clientes` (`idClientes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Caixas_Especies1`
-    FOREIGN KEY (`fk_especie`)
-    REFERENCES `mydb`.`Especies` (`idEspecies`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  idCaixas INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Nome_colmeia varchar(45) NOT NULL,
+  fk_cliente INT NOT NULL,
+  fk_especie INT NOT NULL,
+    FOREIGN KEY (fk_cliente) REFERENCES Clientes (idClientes),
+    FOREIGN KEY (fk_especie) REFERENCES Especies (idEspecies)
+);
 
-
--- -----------------------------------------------------
--- Table `mydb`.`Perguntas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Perguntas (
-  `idPerguntas` INT NOT NULL AUTO_INCREMENT,
-  `Pergunta` VARCHAR(100) NOT NULL,
-  `Resposta` VARCHAR(5000) NULL,
-  `fk_cliente` INT NOT NULL,
-  PRIMARY KEY (`idPerguntas`),
-  INDEX `fk_Perguntas_Clientes1_idx` (`fk_cliente` ASC) VISIBLE,
-  CONSTRAINT `fk_Perguntas_Clientes1`
-    FOREIGN KEY (`fk_cliente`)
-    REFERENCES `mydb`.`Clientes` (`idClientes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Contato`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Contato (
-  `idRedes_sociais` INT NOT NULL AUTO_INCREMENT,
-  `Facebook` VARCHAR(45) NULL,
-  `Google` VARCHAR(45) NULL,
-  `Telefone` VARCHAR(45) NULL,
-  `E-mail` VARCHAR(45) NULL,
-  `Endereco` VARCHAR(100) NULL,
-  `clientes` INT NOT NULL,
-  PRIMARY KEY (`idRedes_sociais`),
-  INDEX `fk_Contato_Clientes1_idx` (`clientes` ASC) VISIBLE,
-  CONSTRAINT `fk_Contato_Clientes1`
-    FOREIGN KEY (`clientes`)
-    REFERENCES `mydb`.`Clientes` (`idClientes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Medidas`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Medidas (
-  `idMedidas` INT NOT NULL AUTO_INCREMENT,
-  `Temp` DECIMAL(6,2) NOT NULL,
-  `Umid` DECIMAL(6,2) NOT NULL,
-  `Horario` DATETIME NOT NULL,
-  `fk_caixas` INT NOT NULL,
-  `fk_clientes` INT NOT NULL,
-  `fk_especie` INT NOT NULL,
-  PRIMARY KEY (`idMedidas`, `Horario`),
-  INDEX `fk_Medidas_Caixas1_idx` (`fk_caixas` ASC, `fk_clientes` ASC, `fk_especie` ASC) VISIBLE,
-  CONSTRAINT `fk_Medidas_Caixas1`
-    FOREIGN KEY (`fk_caixas` , `fk_clientes` , `fk_especie`)
-    REFERENCES `mydb`.`Caixas` (`idCaixas` , `fk_cliente` , `fk_especie`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  idMedidas INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Temp DECIMAL(6,2) NOT NULL,
+  Umid DECIMAL(6,2) NOT NULL,
+  Horario DATETIME NOT NULL,
+  fk_caixas INT NOT NULL,
+  fk_clientes INT NOT NULL,
+  fk_especie INT NOT NULL,
+    FOREIGN KEY (fk_caixas) REFERENCES Caixas (idCaixas),
+    FOREIGN KEY (fk_clientes) REFERENCES Clientes (idClientes),
+    FOREIGN KEY (fk_especie) REFERENCES Especies (idEspecies)
+);
 
+INSERT INTO Medidas (Temp, Umid, Horario, fk_caixas, fk_clientes, fk_especie) VALUES
+(32.5, 48.0, '2021-10-06 14:06:15', 1, 2, 3),
+(29.9, 58.0, '2021-12-08 17:32:55', 3, 3, 4),
+(36.7, 63.0, '2021-10-10 16:21:43', 2, 1, 2);
 
--- -----------------------------------------------------
--- Table `mydb`.`Usuario`
--- -----------------------------------------------------
+INSERT INTO Clientes (Nome, Email, Senha, CPFCNPJ) VALUES 
+("José da Silva", "josesilva@gmail.com", "123456789", "987654231"),
+("Fernando Brandão", "fernando.brandao@bandtec.com.br", "456789123", "789456123"),
+("Adalberto Nascimento", "adalberto.nascimento@bandtec.com.br", "987654231", "321654987");
+
+INSERT INTO Especies (Nome_popular, Nome_cientifico, fk_cliente) VALUES
+("Europeia", "Apis mellifera", 2),
+("Melipona scutellaris", "Melipona scutellaris", 1),
+("Iraí", "Nannotrigona testaceicornis", 2),
+("Tetragonisca angustula", "Tetragonisca angustula", 3);
+
+INSERT INTO Caixas (Nome_colmeia, fk_cliente, fk_especie) VALUES
+("Colmeia de Iraí", 2, 3),
+("Colmeia de Europeias", 2, 1),
+("Colmeia de angustula", 3, 4);
+
+-- As tabelas a seguir não possuem telas proprietárias, por isso, não possuem inserts.
+
+CREATE TABLE IF NOT EXISTS Perguntas (
+  idPerguntas INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Pergunta VARCHAR(100) NOT NULL,
+  Resposta VARCHAR(5000) NULL,
+  fk_cliente INT NOT NULL,
+    FOREIGN KEY (fk_cliente) REFERENCES Clientes (idClientes)
+);
+
+CREATE TABLE IF NOT EXISTS Contato (
+  idRedes_sociais INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Facebook VARCHAR(45) NULL,
+  Google VARCHAR(45) NULL,
+  Telefone VARCHAR(45) NULL,
+  Email VARCHAR(45) NULL,
+  Endereco VARCHAR(100) NULL,
+  clientes INT NOT NULL,
+    FOREIGN KEY (clientes) REFERENCES Clientes (idClientes)
+);
+
 CREATE TABLE IF NOT EXISTS Usuario (
-  `idUsuario` INT NOT NULL AUTO_INCREMENT,
-  `NomeUsuario` VARCHAR(45) NOT NULL,
-  `Senha` VARCHAR(45) NULL,
-  `fk_cliente` INT NOT NULL,
-  PRIMARY KEY (`idUsuario`),
-  INDEX `fk_Usuario_Clientes1_idx` (`fk_cliente` ASC) VISIBLE,
-  CONSTRAINT `fk_Usuario_Clientes1`
-    FOREIGN KEY (`fk_cliente`)
-    REFERENCES `mydb`.`Clientes` (`idClientes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  idUsuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  NomeUsuario VARCHAR(45) NOT NULL,
+  Senha VARCHAR(45) NULL,
+  fk_cliente INT NOT NULL,
+    FOREIGN KEY (fk_cliente) REFERENCES Clientes (idClientes)
+);
 
 
