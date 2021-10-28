@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: rgb(38, 38, 38);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    overflow: hidden;
+}
+
+
+/* HEADER */
+.img-header img{
+    width: 120px;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+.navbar{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgb(5, 5, 5);
+}
+.navbar ul li{
+    display: inline;
+    margin: 0 50px 0 50px;
+}
+.navitem a{
+    font-size: 20px;
+    color: black;
+}
+.header .profile-login a i{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+.active{
+    border-bottom: 3px solid rgb(237, 58, 58);
+}
+
+/* DROPDOWN */
+.navbar li a .dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.dropdown{
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(237, 58, 58);
+    border-radius: 12px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: rgb(237, 58, 58);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.navigation{
+    position: fixed;
+    top: 20%;
+    left: 20px;
+    bottom: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-sizing: initial;
+    border-left: 5px solid rgb(237, 58, 58);
+    transition: width 0.5s;
+    background: rgb(237, 58, 58);
+    overflow-x: hidden;
+}
+.navigation.active{
+    width: 70px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.navigation ul li.active{
+    background: rgb(38, 38, 38);
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li.active a{
+    color: #fff;
+}
+.navigation ul li b:nth-child(1)
+{
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: rgb(38, 38, 38);
+    display: none;
+}
+.navigation ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background: rgb(237, 58, 58);
+}
+.navigation ul li b:nth-child(2)
+{
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background: rgb(38, 38, 38);
+    display: none;
+}
+.navigation ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background: rgb(237, 58, 58);
+}
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2){
+    display: block;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.5em;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+.toggle{
+    position: fixed;
+    top: 20%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgb(237, 58, 58);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle.active{
+    background: rgb(237, 58, 58);
+}
+.toggle ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggle ion-icon.close,
+.toggle.active ion-icon.open
+{
+    display: block;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: none;
+}
