@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+body{
+    min-height:1000px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url( https://www.10wallpaper.com/wallpaper/1366x768/1801/Mercedes_Amg_GT_4K_HD_Poster_1366x768.jpg);
+    background-size: cover;
+    overflow-y: 1900;
+}
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 3.8em;
+    color: #FFF;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #FFF;
+}
+.btn{
+    font-size: 1em;
+    color:#fff;
+    background: rgba(14, 13, 13, 0.787);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;    
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index:10000;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    /* background-color: white ; */
+}
+header .sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration:none;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+section{
+    padding:100px;
+    background-color: rgba(0,0,0,0.2);
+}
+.row{
+    position: relative;
+    width:100%;
+    display: flex;
+}
+.row .col50{
+    position:relative;
+    width: 48%;
+}
+.tittleText{
+    color:#111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.tittleText span{
+    color: black;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.row .col50 .imgBx{
+    position: relative;
+    width:100%;
+    /* min-height: 300px; */
+    height: 100%;
+}
+.row .col50 .imgBx img{
+    position: absolute;
+    TOP:0;
+    left:0;
+    width: 620px;
+    height:320px;
+    border-radius: 10px;
+    object-fit:cover ;
+} 
+.to{
+    transition: 0.7s;
+}
+.to:hover{
+    letter-spacing: 1px;
+}
+
+
+
