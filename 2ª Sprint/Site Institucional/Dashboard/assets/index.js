@@ -1,4 +1,4 @@
-var context = document.getElementById("chart").getContext("2d");
+		var context = document.getElementById("chart").getContext("2d");
 		context.canvas.width = 1000;
 		context.canvas.height = 300;
         
@@ -156,7 +156,14 @@ var context = document.getElementById("chart").getContext("2d");
 		
 		get_dataHumidity();
 
+		function sendData(){
+			var http = new XMLHttpRequest();
+			http.open('POST','http://localhost:3000/api/sendData', false);
+			http.send(null);
+		}
+
         setInterval(() => {
 			get_data();
 			get_dataHumidity();
-		}, 1000);
+			sendData();
+		}, 2000);
