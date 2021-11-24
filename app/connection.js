@@ -3,9 +3,9 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     port     : '3306',
-    user     : 'lucas',
-    password : 'lucas123',
-    database : 'lucas'
+    user     : 'adalberto_master',
+    password : 'pudim',
+    database : 'teste_pudim'
 });
 
 connection.connect(function(err) {

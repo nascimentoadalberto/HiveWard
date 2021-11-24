@@ -33,7 +33,7 @@ router.post('/sendData', (request, response) => {
     temperatura = ArduinoData.ListTemp[ArduinoData.ListTemp.length - 1];
     umidade = ArduinoData.List[ArduinoData.List.length - 1];
 
-    var sql = "INSERT INTO medida(temp, umi, d4ta) VALUES(?,now())";
+    var sql = "INSERT INTO medida(temperatura,umidade, dat4 ) VALUES(?,now())";
     let values = [temperatura, umidade];
     db.query(sql, [values], function(err, result){
         if(err) throw err;
