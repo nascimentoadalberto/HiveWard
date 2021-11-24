@@ -19,10 +19,10 @@
                 </span></span>
 
                 <div id="inputs">
-                    <input type="text" placeholder="E-mail válido" id="input_email"><br>
-                    <input type="password" placeholder="Senha (8 caracteres ou mais)" id="input_senha"><br>
+                    <input type="text" placeholder="E-mail" id="input_email"><br>
+                    <input type="password" placeholder="Senha" id="input_senha"><br>
                     <a class="botao_container">
-                        <button class="botao_login" onclick="verificar()">
+                        <button class="botao_login" onclick="entrar();">
                             Login
                             <div class="botao_icon">
                                 <img src="assets/icon/arrow.svg" alt="">
@@ -44,16 +44,84 @@
 </html>
 
 <script>
-    function verificar() {
-        // quando conectar com o banco de dados, adicionar um if que verifica se o cadastro ainda não existe
+    // function verificar() {
+    //     // quando conectar com o banco de dados, adicionar um if que verifica se o cadastro ainda não existe
 
-        if (input_email.value == "" || input_senha.value == "") {
-            alert("Insira seus dados!")
-        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7) {
-            alert("Login bem sucedido!");
-            window.location.assign("../Dashboard/home/home.html")
-        } else {
-            alert("Verifique se seu e-mail ou sua senha estão corretos.");
+    //     if (input_email.value == "" || input_senha.value == "") {
+    //         alert("Insira seus dados!")
+    //     } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7) {
+    //         alert("Login bem sucedido!");
+    //         window.location.assign("../Dashboard/home/home.html")
+    //     } else {
+    //         alert("Verifique se seu e-mail ou sua senha estão corretos.");
+    //     }
+    // }
+
+    function entrar() {
+        // aguardar();
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (emailVar == "" || senhaVar == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
         }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "2ª Sprint/Site Institucional/Dashboard/home/home.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
 </script>

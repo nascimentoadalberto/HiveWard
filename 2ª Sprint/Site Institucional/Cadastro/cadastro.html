@@ -23,7 +23,7 @@
                     <input placeholder="CPF/CNPJ" id="input_cpf"><br>
                     <input placeholder="Senha (8 caracteres ou mais)" id="input_senha" type="password"><br>
                     <a class="botao_container">
-                        <button class="botao_login" onclick="verificar()">
+                        <button class="botao_login" onclick="cadastrar();">
                             Cadastrar-se 
                             <div class="botao_icon">
                                 <img src="assets/icon/arrow.svg" alt="">
@@ -45,21 +45,57 @@
 </html>
 
 <script>
-    function verificar() {
-        // quando conectar com o banco de dados, adicionar um if que verifica se o cadastro já existe
+    function cadastrar() {
+    // aguardar();
 
-        if (input_email.value == "" || input_senha.value == "" || input_cpf.value == "" || input_nome.value == "") {
-            alert("Insira seus dados!")
-        } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7 && input_nome.value.includes(" ")) {
-            if (!input_cpf.value.length == 11 || !input_cpf.value.length == 14) {
-                alert("Verifique seu CPF/CNPJ!");
-            } else if (input_email.value == "@.com") {
-                alert("Insira um email válido!");
-            } else {
-                alert("Cadastro bem sucedido!");
-                alert("Agora faça seu login!")
-                window.location.assign("../Login/login.html")
-            }
+    var nomeVar = input_nome.value;
+    var emailVar = input_email.value;
+    var cpf_cnpjVar = input_cpf.value;
+    var senhaVar = input_senha.value;
+    // var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    if (input_email.value == "" || input_senha.value == "" || input_cpf.value == "" || input_nome.value == "") {
+        alert("Insira seus dados!")
+    } else if (input_email.value.includes("@") && input_email.value.includes(".com") && input_senha.value.length >= 7 && input_nome.value.includes(" ")) {
+        if (!input_cpf.value.length == 11 || !input_cpf.value.length == 14) {
+            alert("Verifique seu CPF/CNPJ!");
+        } else if (input_email.value == "@.com") {
+            alert("Insira um email válido!");
+        } else {
+            alert("Cadastro bem sucedido!");
+            alert("Agora faça seu login!")
+            window.location.assign("2ª Sprint/Site Institucional/Login/login.html")
         }
     }
+
+    fetch('/usuarios/cadastrar', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+            cpfcnpjServer: cpf_cnpjVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Cadastro realizado com sucesso!");
+            window.location = "login.html";
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+}
 </script>
