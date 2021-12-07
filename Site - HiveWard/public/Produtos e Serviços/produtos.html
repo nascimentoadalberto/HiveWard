@@ -1,34 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos e Serviços</title>
-    <link rel="shortcut icon" href="assets/icon/logo_icon.ico" type="image/x-icon">
+    <title>Produtos</title>
     <link rel="stylesheet" href="produtos.css">
+    <link rel="shortcut icon" type="imagex/png" href="img/Honey.png">
+    <link rel="shortcut icon" href="assets/logo_icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1dbb06025a.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="first-look">
-            <header class="header">
-                <nav class="navbar">
-                    <a href="./home.html" class="nav-logo">
-                        <img src="./assets/img/Honey.png" alt="">
-                        <h1>Hive<span id="hiveWard_logo">Ward</span></h1>
-                    </a>
 
-                    <div class="search-form">
-                        <ul class="nav-list" id="nav-list">
-                            <li class="nav-item active"><a href="./home.html">Home</a></li>
-                            <li class="nav-item"><a href="../Calculadora Financeira/CalculadoraFinanceira.html">Simulador Financeiro</a></li>
-                        </ul>
-                        <div class="user-profile">
-                            <a href="../Cadastro/cadastro.html"><i class="fas fa-user-circle"></i></a>  
-                        </div>
-                    </div>
-                </nav>
-            </header>
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <!-- Começo do header -->
+    <div class="max-container">
+        <div class="container">
+            <div class="header">
+                <div class="navbar">
+                    <a href="../Páginza Inicial/home.html" class="nav-logo">
+                        <img class="img-logo" src="assets/logo_icon.ico" alt="">
+                        <h1>Hive<span class='ward'>Ward</span></h1>
+                    </a>
+                    <ul class="list">
+                        <li class="nav-item active"><a href="../Página Inicial/home.html">Home</a></li>
+                        <li class="nav-item"><a href="../Calculadora Financeira/CalculadoraFinanceira.html">Simulador
+                                Financeiro</a></li>
+                        <a href="../Cadastro/cadastro.html"><i class="fas fa-user-circle"></i></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- Final do header -->
+
+        <div class="margin">
+            <div class="container_persons">
+
+               
+                <div class="person-left" id="adalberto">
+                    <img src="img/Component 2.png" class="img_person">
+                    <h2 class="h2-left"> Kit de Manutenção</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eligendi placeat eum ratione reprehenderit distinctio corporis quidem necessitatibus, deleniti quae quos dignissimos quas commodi tempore inventore autem illum, similique consectetur.</p>
+                </div>
+
+             
+                <div class="person-right" id="lucas">
+                    <img src="img/image 19.png" class="img_person">
+                    <h2 class="h2-right">Manutenção dos kits</h2>
+                </div>
+
+                <div class="person-left" id="guilherme">
+                    <img src="img/image 20.png" class="img_person">
+                    <h2 class="h2-left">Faça uma Simulação</h2>
+                </div>
+
+                
+
+            </div>
         </div>
+
+
+            <!-- FOOTER -->
+            <footer id="footer">
+                <div class="footer-content">
+                    <div class="social-media">
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="footer-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li class="footer-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="services">
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#">Produtos e serviços<i
+                                        class="fas fa-shopping-bag"></i></a></li>
+                            <!-- <li class="footer-item"><a href="#">Trabalhe conosco<i class="far fa-id-card"></i></a></li> -->
+                            <li class="footer-item"><a href="../Login/login.html">Entre com a sua conta<i
+                                        class="fas fa-sign-in-alt"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-footer">
+                        <img src="assets/Honey.png" alt="">
+                        <h1>Hive<span id="hiveWard_logo">Ward</span></h1>
+                    </div>
+                </div>
+                <div class="copyright-footer">
+                    <p>2021 &copy; Todos os direitos reservados</p>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
+<!-- <script src="app.js"></script> -->
+
 </html>
