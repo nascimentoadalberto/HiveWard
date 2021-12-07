@@ -82,17 +82,16 @@ ul{
     
 }
 .container_persons {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 14vh;
-}
+   padding:  48px 10px 10px 10px;
+} 
 .img_person{
-    width: 35vh; 
+    width: 45vh;
     border-radius: 1vh;
-    /* border: #FEC600 solid; */
+    margin-top: 69px;
+   
 }
 .person-right{
-    width: 35vh;
+    width: 45vh;
     margin-left: 65vw;
     line-height: 42px;
 }
@@ -106,6 +105,9 @@ ul{
     padding: 3px 0 3px 0;
     margin: 20px;
     padding: 20px;
+    position: absolute;
+    left: 40%;
+    TOP: 81%;
 }
 .person-left h2{
     color: #FEC600;
@@ -192,6 +194,73 @@ i{
     cursor: default;
 }
 
+
+.margin{
+    padding: 0 40px;
+    width: 70vw;
+    height: 150vh;
+    border: solid #FEAA00;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-size: 9px;
+    margin-left: 30px;
+    background: linear-gradient(180deg, rgba(8, 21, 30, 0.6) 3.62%, rgba(8, 10, 11, 0.6) 63.02%, rgba(3, 3, 8, 0.6) 100%);
+}
+.txt{
+    color: #FFF;
+    font-size: 2vh;
+}
+.text{    
+    position: absolute;
+    left: 525px;
+    width: 38vh;
+    TOP: 53%;
+    border-left: 3px solid #FEC600;
+    padding: 27px 10px 10px 17px;
+}
+.text3{    
+    position: absolute;
+    left: 525px;
+    width: 38vh;
+    TOP: 142%;
+    border-left: 3px solid #FEC600;
+    padding: 50px 10px 10px 17px;
+}
+
+.btn_saibaMais{
+    padding-left: 8px;
+    background-color: #FEC600;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    height: 35px;
+    
+    
+}
+.btn_saibaMais:hover{
+    background-color: white;
+    transition: 1s
+    
+}
+.btn_saibaMais a{
+    color: #000;
+}
+i .fas,.fa-arrow-right {
+    background-color: #f39400;
+    font-size: inherit;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -234,15 +303,4 @@ i{
     height: 100%;
     background: linear-gradient(to top, #f39400, #FEC600);
     filter: blur(30px);
-}
-.margin{
-    padding: 0 40px;
-    width: 63vw;
-    height: 80vh;
-    border: solid #FEAA00;
-    border-radius: 30px;
-    font-family: 'Montserrat';
-    font-size: 9px;
-    margin-left: 30px;
-    background: linear-gradient(180deg, rgba(8, 21, 30, 0.6) 3.62%, rgba(8, 10, 11, 0.6) 63.02%, rgba(3, 3, 8, 0.6) 100%);
 }
