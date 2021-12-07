@@ -82,12 +82,13 @@ ul{
     
 }
 .container_persons {
-   padding:  48px 10px 10px 10px;
+    padding: 3px 10px 10px 10px;
 } 
 .img_person{
     width: 45vh;
     border-radius: 1vh;
     margin-top: 69px;
+    padding: 45px 0px 0px 0px;
    
 }
 .person-right{
@@ -106,8 +107,8 @@ ul{
     margin: 20px;
     padding: 20px;
     position: absolute;
-    left: 40%;
-    TOP: 81%;
+    left: 36%;
+    TOP: 80%;
 }
 .person-left h2{
     color: #FEC600;
@@ -212,17 +213,25 @@ i{
 }
 .text{    
     position: absolute;
-    left: 525px;
+    left: 605px;
     width: 38vh;
-    TOP: 53%;
+    TOP: 49%;
     border-left: 3px solid #FEC600;
     padding: 27px 10px 10px 17px;
 }
+.text2{    
+    position: absolute;
+    left: 323px;
+    width: 60vh;
+    TOP: 85%;
+    border-right: 3px solid #FEC600;
+    padding: 50px 10px 10px 17px;
+}
 .text3{    
     position: absolute;
-    left: 525px;
+    left: 605px;
     width: 38vh;
-    TOP: 142%;
+    TOP: 133%;
     border-left: 3px solid #FEC600;
     padding: 50px 10px 10px 17px;
 }
