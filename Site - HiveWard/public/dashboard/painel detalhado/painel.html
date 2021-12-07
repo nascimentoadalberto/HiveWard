@@ -16,7 +16,7 @@
         <div id="main_container">
             <div id="sidebar">
                 <div id="welcome">
-                    <span id="main_title">Bem vindo (a), <br><span id="name">Fernando Brandão</span></span>
+                    <span id="main_title">Bem vindo (a), <br><span id="name_user"></span></span>
                 </div>
                 <div class="navmenu">
                     <div class="navmenu_start">
@@ -140,3 +140,6 @@
 </body>
 <script src="../assets/index.js"></script>
 </html>
+<script>
+    name_user.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+</script>
