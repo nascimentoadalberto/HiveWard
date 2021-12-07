@@ -18,7 +18,7 @@ body{
     background-image: linear-gradient(to bottom, #464227,rgb(9, 8, 8),rgb(25, 30, 51),#464227);
 }
 .container{
-    background-image: url(./assets/img/honeycomb-34984\ 2.png); 
+    background-image: url("../assets/img/honeycomb-34984\ 2.png");
     overflow: hidden;
     margin: 0 auto;
 }

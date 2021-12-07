@@ -36,7 +36,7 @@
                     <a id="link_login" href="../Login/login.html">ou faça login</a>
                 </div>
                 <div class="link_home">
-                    <a id="link_home" href="../Página Inicial/home.html">Voltar à página inicial</a>
+                    <a id="link_home" href="../index.html">Voltar à página inicial</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,6 @@
 
 <script>
     function cadastrar() {
-    // aguardar();
 
     var nomeVar = input_nome.value;
     var emailVar = input_email.value;
@@ -61,11 +60,11 @@
             alert("Verifique seu CPF/CNPJ!");
         } else if (input_email.value == "@.com") {
             alert("Insira um email válido!");
-        } else {
-            alert("Cadastro bem sucedido!");
-            alert("Agora faça seu login!")
-            window.location.assign("2ª Sprint/Site Institucional/Login/login.html")
         }
+        // else {
+        //     alert("Cadastro bem sucedido!");
+        //     alert("Agora faça seu login!")
+        // }
     }
 
     fetch('/usuarios/cadastrar', {
@@ -85,17 +84,14 @@
 
         if (resposta.ok) {
             window.alert("Cadastro realizado com sucesso!");
-            window.location = "login.html";
-            limparFormulario();
-            finalizarAguardar();
+            window.location = "../Login/login.html";
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
     });
 
-    return false;
+    return false;   
 }
 </script>

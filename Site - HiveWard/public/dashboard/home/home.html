@@ -26,7 +26,7 @@
         <div id="main_container">
             <div id="sidebar">
                 <div id="welcome">
-                    <span id="main_title">Bem vindo (a), <br><span id="name">Fernando Brandão</span></span>
+                    <span id="main_title">Bem vindo (a), <br><span id="name_user"></span></span>
                 </div>
                 <div class="navmenu">
                     <div class="navmenu_start">
@@ -117,11 +117,11 @@
                     <div class="container2_body_left">
                         <div id="dashboard_content">
                             <div class="dashboard_left_header">
-                                <div id="caixas" class="conteudo_condensado">
-                                    <img src="../assets/icon/home_bee.svg" class="conteudo_condensado_img">
+                                <div id="temp_media" class="conteudo_condensado">
+                                    <img src="../assets/icon/medida_umidade.svg" class="conteudo_condensado_img">
                                     <div class="conteudo_condensado_content">
-                                        <span class="subtitle">Número de caixas</span>
-                                        <span class="valor">25</span>
+                                        <span class="subtitle">Umidade média</span>
+                                        <label id='averageHumidity'>0.00</label>
                                     </div>
                                 </div>
                                 <div id="temp_media" class="conteudo_condensado">
@@ -144,7 +144,6 @@
                                     </div>
                                     <div class="grafico_container">
                                         <span class="subtitle">Clique para acessar detalhes do gráfico</span>
-                                            <h2>Média: <label id='averageHumidity'>0.00</label></h2>
                                             <section style="width:100%">
                                                 <canvas id="chart-humidity" width="100%" height="80vh"></canvas>
                                             <section>
@@ -252,3 +251,6 @@
 </body>
 <script src="../assets/index.js"></script>
 </html>
+<script>
+    name_user.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+</script>
