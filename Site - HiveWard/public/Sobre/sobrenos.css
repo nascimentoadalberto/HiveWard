@@ -88,14 +88,15 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 10vw;
-    font-size: 3vh;
+    padding: 8px 14vw;
+    font-size: 24px;
 }
 
 .img_txt img {
-    width: 80vw;
+    width: 73vw;
     margin-top: 10vh;
     margin-bottom: 5vh;
+    border-radius: 5px;
 }
 
 /* FOOTER */
