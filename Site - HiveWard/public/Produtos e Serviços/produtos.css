@@ -1,9 +1,315 @@
-*  {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+body{
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-family: 'Montserrat';
+    background-image: linear-gradient(to bottom, #464227,rgb(9, 8, 8),rgb(25, 30, 51),#464227);
+    background-repeat: no-repeat;
+}
+.container{
+    padding: 0 10vw;
+}
+.max-container {
+    background-image: url(img/honeycomb-34984\ 2.png);
+    background-size: contain;
+    margin: 0 auto; 
+   
+}
+a {
+    text-decoration: none;
+    color:#B3AFB2;
+}
+ul{
+    list-style: none;
 }
 
-body {
-    background-image: linear-gradient(to bottom, #464227,#090808,#191e33,#464227);
+.header{
+    height: 25vh;
+    margin: 0 auto;
+}
+.nav-item{
+    display: inline;
+    margin-left: 6vh;
+    font-size: 18px;
+}
+/* Transição */
+.active{
+    border-bottom: 3px solid #FFDf0D;
+}
+.nav-item a:hover{
+    transition: left 500ms;
+}
+/* Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 10vw; */
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.nav-logo img{
+    width: 15vh;
+}
+.nav-logo h1{
+    font-size: 7vh;
+    margin-left: 2px;
+    color: #f39400 ;
+    cursor: default;
+    font-weight: bold;
+}
+.ward{
+    color: #FFF;
+    font-weight: bold;
+}
+
+/* Icone user */
+.fas, .fa-user-circle{
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.tittle h2{
+    color: #FFDf0D;
+    margin-top: 1vh;
+    font-size: 7vh;
+    margin-left: 2vh;
+    font-family: 'Montserrat';
+    
+}
+.container_persons {
+    padding: 3px 10px 10px 10px;
+} 
+.img_person{
+    width: 45vh;
+    border-radius: 1vh;
+    margin-top: 69px;
+    padding: 45px 0px 0px 0px;
+   
+}
+.person-right{
+    width: 45vh;
+    margin-left: 65vw;
+    line-height: 42px;
+}
+.person-right img {
+    margin: 0 21vw 0 0;
+}
+.person-right h2{
+    color: #FEC600;
+    font-size: 3vh;
+    border-right: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    left: 36%;
+    TOP: 80%;
+}
+.person-left h2{
+    color: #FEC600;
+    font-size: 3vh;
+    border-left: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+    margin: 20px;
+    padding: 20px;
+    width: 114vh;
+}
+
+.h2-right {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.person-right{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.person-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* footer */
+.footer{
+    bottom: 0;
+    margin-top: 40vh;
+}
+.social-media, .services{
+    border-right: 3px solid #FEC600;
+    padding: 3px 0 3px 0;
+}
+.social-media .footer-list .footer-item a i{
+    font-size: 40px;
+}
+.social-media .footer-list .footer-item a i:hover{
+    color: #c59f12;
+}
+.footer-item{
+    display: inline;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-item{
+    margin-right: 1vh;
+}
+.footer-item a{
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+i{
+    font-size: 2vw;
+    color: #FEC600;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+}
+.logo-footer img{
+    width: 10vh;
+}
+.logo-footer h1{
+    font-size: 50px;
+    margin-left: 25px;
+    color: #f39400 ;
+    cursor: default;
+}
+#hiveWard_logo{
+    color: white;
+}
+.copyright-footer{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+.copyright-footer p{
+    color: #B3AFB2;
+    cursor: default;
+}
+
+
+.margin{
+    padding: 0 40px;
+    width: 70vw;
+    height: 150vh;
+    border: solid #FEAA00;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-size: 9px;
+    margin-left: 30px;
+    background: linear-gradient(180deg, rgba(8, 21, 30, 0.6) 3.62%, rgba(8, 10, 11, 0.6) 63.02%, rgba(3, 3, 8, 0.6) 100%);
+}
+.txt{
+    color: #FFF;
+    font-size: 2vh;
+}
+.text{    
+    position: absolute;
+    left: 605px;
+    width: 38vh;
+    TOP: 49%;
+    border-left: 3px solid #FEC600;
+    padding: 27px 10px 10px 17px;
+}
+.text2{    
+    position: absolute;
+    left: 323px;
+    width: 60vh;
+    TOP: 85%;
+    border-right: 3px solid #FEC600;
+    padding: 50px 10px 10px 17px;
+}
+.text3{    
+    position: absolute;
+    left: 605px;
+    width: 38vh;
+    TOP: 133%;
+    border-left: 3px solid #FEC600;
+    padding: 50px 10px 10px 17px;
+}
+
+.btn_saibaMais{
+    padding-left: 8px;
+    background-color: #FEC600;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    height: 35px;
+    
+    
+}
+.btn_saibaMais:hover{
+    background-color: white;
+    transition: 1s
+    
+}
+.btn_saibaMais a{
+    color: #000;
+}
+i .fas,.fa-arrow-right {
+    background-color: #f39400;
+    font-size: inherit;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    animation: animate 5s linear infinite;
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    filter: blur(10px);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #f39400, #FEC600);
+    filter: blur(30px);
 }
