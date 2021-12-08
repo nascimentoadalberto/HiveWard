@@ -1,7 +1,8 @@
 const express = require('express');
 const { ArduinoData } = require('./serial')
 const router = express.Router();
-const db = require('./connection');
+const executar = require('./connection');
+
 
 router.get('/temperature', (request, response, next) => {
 
@@ -32,20 +33,11 @@ router.get('/humidity', (request, response, next) => {
 router.post('/sendData', (request, response) => {
     temperatura = ArduinoData.ListTemp[ArduinoData.ListTemp.length - 1];
     umidade = ArduinoData.List[ArduinoData.List.length - 1];
-
-    let dat4 = new Date()
-
-    var sql = `INSERT INTO medidas(temperatura, umidade, momento) VALUES(${temperatura}, ${umidade}, current_timestamp)`;
-    values = [temperatura, umidade, dat4, 1];
-    db.executar(sql, function(err, result){
-        if(err) throw err;
-        console.log("Medidas inseridas: " + result.affectedRows)
-    }).then(function(resultado) {
-        console.log(resultado);
-        response.sendStatus(200);  
-    }).catch(function (erro) {
-        response.status(500).json(erro)
-    })
+    
+    // var request = new sql.Request();
+    var sql = `INSERT INTO [dbo].[medidas2](temperatura,umidade) VALUES(${temperatura}, ${umidade})`;
+    executar(sql)
+    response.sendStatus(200);
 })
 
 module.exports = router;
