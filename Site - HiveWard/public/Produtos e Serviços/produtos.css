@@ -218,6 +218,7 @@ i{
     TOP: 49%;
     border-left: 3px solid #FEC600;
     padding: 27px 10px 10px 17px;
+    transform: translate(-49%, 0);
 }
 .text2{    
     position: absolute;
