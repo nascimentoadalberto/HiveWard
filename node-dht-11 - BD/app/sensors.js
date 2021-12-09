@@ -1,6 +1,6 @@
 function lm35(min, max) {
-    min = typeof min == "undefined" ? 18 : min;
-    max = typeof max == "undefined" ? 25 : max;
+    min = typeof min == "undefined" ? 33 : min;
+    max = typeof max == "undefined" ? 36 : max;
   
     let random = Math.random() * (max - min) + min;
   
@@ -26,8 +26,8 @@ function dht11(options) {
       );
     }
   
-    minTemperature = typeof minTemperature == "undefined" ? 18 : minTemperature;
-    maxTemperature = typeof maxTemperature == "undefined" ? 25 : maxTemperature;
+    minTemperature = typeof minTemperature == "undefined" ? 33 : minTemperature;
+    maxTemperature = typeof maxTemperature == "undefined" ? 36 : maxTemperature;
   
     minHumidity = typeof minHumidity == "undefined" ? 20 : minHumidity;
     maxHumidity = typeof maxHumidity == "undefined" ? 80 : maxHumidity;

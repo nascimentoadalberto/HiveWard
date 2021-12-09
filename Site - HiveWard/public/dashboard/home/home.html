@@ -80,7 +80,7 @@
                     <div class="linespace"></div>
                     <div class="navmenu_end">
                         <ul class="navmenu_list">
-                            <a href="../../Página Inicial/home.html">
+                            <a href="/Site - HiveWard/public/index.html">
                                 <li id="home">
                                     <div class="icone_container">
                                         <img src="../assets/icon/navmenu_home.svg" class="icone">
@@ -88,7 +88,7 @@
                                     <span class="navmenu_txt">Home</span>
                                 </li>
                             </a>
-                            <a href="#">
+                            <a href="/Site - HiveWard/public/index.html">
                                 <li id="logout">
                                     <div class="icone_container">
                                         <img src="../assets/icon/navmenu_logout.svg" class="icone">
@@ -165,9 +165,22 @@
                                         <span class="nome_colmeia">Colmeia A</span>
                                         <div class="medicao_colmeia_content">
                                             <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
+                                            <span class="temperatura_colmeia" id="tempColmeiaA"></span>
                                             <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
+                                            <span class="umidade_colmeia" id="umidadeColmeiaA"></span>
+                                        </div>
+                                        <div class="situacao" id="umidade_colmeia2"></div>
+                                    </div>
+                                </a>
+
+                                <a href="../colmeia/colmeia.html">
+                                    <div class="medicao_colmeia">
+                                        <span class="nome_colmeia">Colmeia B</span>
+                                        <div class="medicao_colmeia_content">
+                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
+                                            <span class="temperatura_colmeia" id="tempColmeiaB"></span>
+                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
+                                            <span class="umidade_colmeia" id="umidadeColmeiaB"></span>
                                         </div>
                                         <div class="situacao"></div>
                                     </div>
@@ -175,12 +188,12 @@
 
                                 <a href="../colmeia/colmeia.html">
                                     <div class="medicao_colmeia">
-                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <span class="nome_colmeia">Colmeia C</span>
                                         <div class="medicao_colmeia_content">
                                             <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
+                                            <span class="temperatura_colmeia" id="tempColmeiaC"></span>
                                             <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
+                                            <span class="umidade_colmeia" id="umidadeColmeiaC"></span>
                                         </div>
                                         <div class="situacao"></div>
                                     </div>
@@ -188,51 +201,12 @@
 
                                 <a href="../colmeia/colmeia.html">
                                     <div class="medicao_colmeia">
-                                        <span class="nome_colmeia">Colmeia A</span>
+                                        <span class="nome_colmeia">Colmeia D</span>
                                         <div class="medicao_colmeia_content">
                                             <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
+                                            <span class="temperatura_colmeia" id="tempColmeiaD"></span>
                                             <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
-                                        </div>
-                                        <div class="situacao"></div>
-                                    </div>
-                                </a>
-
-                                <a href="../colmeia/colmeia.html">
-                                    <div class="medicao_colmeia">
-                                        <span class="nome_colmeia">Colmeia A</span>
-                                        <div class="medicao_colmeia_content">
-                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
-                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
-                                        </div>
-                                        <div class="situacao"></div>
-                                    </div>
-                                </a>
-
-                                <a href="../colmeia/colmeia.html">
-                                    <div class="medicao_colmeia">
-                                        <span class="nome_colmeia">Colmeia A</span>
-                                        <div class="medicao_colmeia_content">
-                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
-                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
-                                        </div>
-                                        <div class="situacao"></div>
-                                    </div>
-                                </a>
-
-                                <a href="../colmeia/colmeia.html">
-                                    <div class="medicao_colmeia">
-                                        <span class="nome_colmeia">Colmeia A</span>
-                                        <div class="medicao_colmeia_content">
-                                            <img src="../assets/icon/medida_termometro.svg" class="temp_img">
-                                            <span class="temperatura_colmeia">31°</span>
-                                            <img src="../assets/icon/medida_umidade.svg" class="umid_img">
-                                            <span class="umidade_colmeia">48%</span>
+                                            <span class="umidade_colmeia" id="umidadeColmeiaD"></span>
                                         </div>
                                         <div class="situacao"></div>
                                     </div>
@@ -253,4 +227,55 @@
 </html>
 <script>
     name_user.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+
+    // if(document.getElementById('averageHumidity2').value > 70){
+    //     document.getElementById('umidade_colmeia2').style.backgroundColor = 'red';
+    // }
+
+    setInterval(function(){
+        var umidadeA = 0;
+        var umidadeB = 0;
+        var umidadeC = 0;
+        var umidadeD = 0;
+
+        var tempA = 0;
+        var tempB = 0;
+        var tempC = 0;
+        var tempD = 0;
+
+        for(var i = 0; i < 200; i++){
+            // UMIDADES COLMEIAS
+            umidadeA = Math.random() * (47 - 41) + 41;
+            umidadeB = Math.random() * (40.7 - 40) + 40;
+            umidadeC = Math.random() * (40.8 - 40) + 40;
+            umidadeD = Math.random() * (40.85 - 40) + 40;
+
+            // TEMPERATURAS COLMEIAS
+            tempA = Math.random() * (35 - 33) + 33;
+            tempB = Math.random() * (35.5 - 34) + 34;
+            tempC = Math.random() * (35 - 33) + 33;
+            tempD = Math.random() * (35 - 33) + 33;
+        }
+
+        // CONDICIONAIS DE ALERTAS
+        if(umidadeA > 40){
+            document.getElementById('umidade_colmeia2').style.backgroundColor = 'red';
+            // alert('Colmeia com alta umidade!');
+        }else{
+            document.getElementById('umidade_colmeia2').style.backgroundColor = 'green';
+        }
+
+        // TEMPERATURA
+        document.getElementById('tempColmeiaA').innerHTML = `${tempA.toFixed(1)}`;
+        document.getElementById('tempColmeiaB').innerHTML = `${tempB.toFixed(1)}`;
+        document.getElementById('tempColmeiaC').innerHTML = `${tempC.toFixed(1)}`;
+        document.getElementById('tempColmeiaD').innerHTML = `${tempD.toFixed(1)}`;
+
+        // UMIDADES
+        document.getElementById('umidadeColmeiaA').innerHTML = `${umidadeA.toFixed(2)}`;
+        document.getElementById('umidadeColmeiaB').innerHTML = `${umidadeB.toFixed(2)}`;
+        document.getElementById('umidadeColmeiaC').innerHTML = `${umidadeC.toFixed(2)}`;
+        document.getElementById('umidadeColmeiaD').innerHTML = `${umidadeD.toFixed(2)}`;
+    }, 3500);
+
 </script>

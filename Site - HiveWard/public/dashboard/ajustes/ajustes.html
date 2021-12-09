@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="container2_body">
-                    <div class="grid_container">
+                    <!-- <div class="grid_container">
                         <div id="notificacoes">
                             <span class="title">Notificações</span>
                             <div class="check_container">
@@ -110,16 +110,16 @@
                                 <input type="checkbox" class="checkbox" checked> Notificar quando responderem uma dúvida
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="grid_container">
+                    <!-- <div class="grid_container">
                         <div id="conta">
                             <span class="title">Conta</span>
                             <div class="check_container">
                                 <input type="checkbox" class="checkbox"> Exibir meu e-mail nas perguntas
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="grid_container">
                         <div id="graficos">
@@ -172,4 +172,7 @@
 </html>
 <script>
     name_user.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+    alteracao_nome.placeholder= `${sessionStorage.NOME_USUARIO}`;
+    alteracao_email.placeholder = `${sessionStorage.EMAIL_USUARIO}`;
+    alteracao_cpf.placeholder = `${sessionStorage.CPF_USUARIO}`;
 </script>
