@@ -35,7 +35,7 @@ router.post('/sendData', (request, response) => {
     umidade = ArduinoData.List[ArduinoData.List.length - 1];
     
     // var request = new sql.Request();
-    var sql = `INSERT INTO [dbo].[medidas2](temperatura,umidade) VALUES(${temperatura}, ${umidade})`;
+    var sql = `INSERT INTO [dbo].[medidas2](temperatura,umidade, d4ta) VALUES(${temperatura}, ${umidade}, CURRENT_TIMESTAMP)`;
     executar(sql)
     response.sendStatus(200);
 })
